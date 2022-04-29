@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: Github
-      path: gdg-cloud-montreal/microservices-demo
+      path: gdg-cloud-montreal/online-boutique
   - name: docker_frontend_build_info
     type: BuildInfo
     configuration:
