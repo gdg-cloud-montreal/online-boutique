@@ -8,9 +8,14 @@ resources:
     type: BuildInfo
     configuration:
       sourceArtifactory: Artifactory_intergration
-      buildName: build_boutique
+      buildName: build_frontend
       buildNumber: ${run_number}
-
+  - name: shippingservice_build_info
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: Artifactory_intergration
+      buildName: build_shippingservice
+      buildNumber: ${run_number}
 pipelines:
   - name: build_boutique_frontend
     steps:
@@ -49,4 +54,42 @@ pipelines:
           - name: build_frontend
         inputResources:
           - name: frontend_build_info
+            trigger: false
+  - name: build_boutique_shippingservice
+    steps:
+    - name: build_shippingservice
+      type: DockerBuild
+      configuration:
+        affinityGroup: fmkGroup
+        dockerFileLocation: shippingservice
+        dockerFileName: Dockerfile
+        dockerImageName: ${int_server_name_value}.jfrog.io/boutique/shippingservice
+        dockerImageTag: ${run_number}
+        dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
+        integrations:        
+          - name: Artifactory_intergration
+          - name: server_name
+        inputResources:
+          - name: ApplicationRepo
+    - name: push_shippingservice
+      type: DockerPush
+      configuration:
+        affinityGroup: fmkGroup
+        targetRepository: boutique
+        autoPublishBuildInfo: true
+        integrations:
+          - name: Artifactory_intergration
+        inputSteps:
+          - name: build_shippingservice
+        outputResources:
+          - name: shippingservice_build_info
+    - name: xray_scan_shippingservice
+      type: XrayScan
+      configuration:
+        affinityGroup: fmkGroup
+        failOnScan: false
+        inputSteps:
+          - name: build_shippingservice
+        inputResources:
+          - name: shippingservice_build_info
             trigger: false
