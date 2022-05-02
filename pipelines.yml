@@ -7,7 +7,7 @@ resources:
   - name: frontend_build_info
     type: BuildInfo
     configuration:
-      sourceArtifactory: artifactory
+      sourceArtifactory: artifactory-build-info
       buildName: build_boutique
       buildNumber: ${run_number}
 
@@ -28,7 +28,7 @@ pipelines:
           - name: server_name
         inputResources:
           - name: source_code
-    - name: push_frontend_docker
+    - name: push_frontend
       type: DockerPush
       configuration:
         affinityGroup: fmkGroup
@@ -40,13 +40,13 @@ pipelines:
           - name: build_frontend
         outputResources:
           - name: frontend_build_info
-    - name: xray_scan_frontend_docker
+    - name: xray_scan_frontend
       type: XrayScan
       configuration:
         affinityGroup: fmkGroup
         failOnScan: false
         inputSteps:
-          - name: frontend_docker
+          - name: build_frontend
         inputResources:
           - name: frontend_build_info
             trigger: false
