@@ -12,7 +12,7 @@ pipelines:
         dockerImageTag: ${run_number}
         dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
         integrations:        
-          - name: Artifactory_intergration
+          - name: artifactory
           - name: server_name
         inputResources:
           - name: adsvc_repo
@@ -23,7 +23,7 @@ pipelines:
         targetRepository: boutique
         autoPublishBuildInfo: true
         integrations:
-          - name: Artifactory_intergration
+          - name: artifactory
         inputSteps:
           - name: build_adsvc
         outputResources:
@@ -50,7 +50,7 @@ pipelines:
         dockerImageTag: ${run_number}
         dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
         integrations:        
-          - name: Artifactory_intergration
+          - name: artifactory
           - name: server_name
         inputResources:
           - name: cartsvc_repo
@@ -61,7 +61,7 @@ pipelines:
         targetRepository: boutique
         autoPublishBuildInfo: true
         integrations:
-          - name: Artifactory_intergration
+          - name: artifactory
         inputSteps:
           - name: build_cartsvc
         outputResources:
@@ -88,7 +88,7 @@ pipelines:
         dockerImageTag: ${run_number}
         dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
         integrations:        
-          - name: Artifactory_intergration
+          - name: artifactory
           - name: server_name
         inputResources:
           - name: checkoutsvc_repo
@@ -99,7 +99,7 @@ pipelines:
         targetRepository: boutique
         autoPublishBuildInfo: true
         integrations:
-          - name: Artifactory_intergration
+          - name: artifactory
         inputSteps:
           - name: build_checkoutsvc
         outputResources:
@@ -126,7 +126,7 @@ pipelines:
         dockerImageTag: ${run_number}
         dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
         integrations:        
-          - name: Artifactory_intergration
+          - name: artifactory
           - name: server_name
         inputResources:
           - name: currencysvc_repo
@@ -137,7 +137,7 @@ pipelines:
         targetRepository: boutique
         autoPublishBuildInfo: true
         integrations:
-          - name: Artifactory_intergration
+          - name: artifactory
         inputSteps:
           - name: build_currencysvc
         outputResources:
@@ -164,7 +164,7 @@ pipelines:
         dockerImageTag: ${run_number}
         dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
         integrations:        
-          - name: Artifactory_intergration
+          - name: artifactory
           - name: server_name
         inputResources:
           - name: emailsvc_repo
@@ -175,7 +175,7 @@ pipelines:
         targetRepository: boutique
         autoPublishBuildInfo: true
         integrations:
-          - name: Artifactory_intergration
+          - name: artifactory
         inputSteps:
           - name: build_emailsvc
         outputResources:
@@ -202,7 +202,7 @@ pipelines:
         dockerImageTag: ${run_number}
         dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
         integrations:        
-          - name: Artifactory_intergration
+          - name: artifactory
           - name: server_name
         inputResources:
           - name: frontendsvc_repo
@@ -213,7 +213,7 @@ pipelines:
         targetRepository: boutique
         autoPublishBuildInfo: true
         integrations:
-          - name: Artifactory_intergration
+          - name: artifactory
         inputSteps:
           - name: build_frontend
         outputResources:
@@ -240,7 +240,7 @@ pipelines:
         dockerImageTag: ${run_number}
         dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
         integrations:        
-          - name: Artifactory_intergration
+          - name: artifactory
           - name: server_name
         inputResources:
           - name: paymentsvc_repo
@@ -251,7 +251,7 @@ pipelines:
         targetRepository: boutique
         autoPublishBuildInfo: true
         integrations:
-          - name: Artifactory_intergration
+          - name: artifactory
         inputSteps:
           - name: build_paymentsvc
         outputResources:
@@ -278,7 +278,7 @@ pipelines:
         dockerImageTag: ${run_number}
         dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
         integrations:        
-          - name: Artifactory_intergration
+          - name: artifactory
           - name: server_name
         inputResources:
           - name: productcatalogsvc_repo
@@ -289,7 +289,7 @@ pipelines:
         targetRepository: boutique
         autoPublishBuildInfo: true
         integrations:
-          - name: Artifactory_intergration
+          - name: artifactory
         inputSteps:
           - name: build_productcatalogsvc
         outputResources:
@@ -316,7 +316,7 @@ pipelines:
         dockerImageTag: ${run_number}
         dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
         integrations:        
-          - name: Artifactory_intergration
+          - name: artifactory
           - name: server_name
         inputResources:
           - name: recommendationsvc_repo
@@ -327,7 +327,7 @@ pipelines:
         targetRepository: boutique
         autoPublishBuildInfo: true
         integrations:
-          - name: Artifactory_intergration
+          - name: artifactory
         inputSteps:
           - name: build_recommendationsvc
         outputResources:
@@ -354,7 +354,7 @@ pipelines:
         dockerImageTag: ${run_number}
         dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
         integrations:        
-          - name: Artifactory_intergration
+          - name: artifactory
           - name: server_name
         inputResources:
           - name: shippingsvc_repo
@@ -365,7 +365,7 @@ pipelines:
         targetRepository: boutique
         autoPublishBuildInfo: true
         integrations:
-          - name: Artifactory_intergration
+          - name: artifactory
         inputSteps:
           - name: build_shippingsvc
         outputResources:
@@ -392,7 +392,7 @@ pipelines:
         dockerImageTag: ${run_number}
         dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
         integrations:        
-          - name: Artifactory_intergration
+          - name: artifactory
           - name: server_name
         inputResources:
           - name: loadgensvc_repo
@@ -403,7 +403,7 @@ pipelines:
         targetRepository: boutique
         autoPublishBuildInfo: true
         integrations:
-          - name: Artifactory_intergration
+          - name: artifactory
         inputSteps:
           - name: build_loadgen
         outputResources:

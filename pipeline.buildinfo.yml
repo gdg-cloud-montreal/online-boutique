@@ -4,66 +4,66 @@ resources:
   - name: adsvc_build_info
     type: BuildInfo
     configuration:
-      sourceArtifactory: Artifactory_intergration
+      sourceArtifactory: artifactory
       buildName: build_adsvc
       buildNumber: ${run_number}
   - name: cartsvc_build_info
     type: BuildInfo
     configuration:
-      sourceArtifactory: Artifactory_intergration
+      sourceArtifactory: artifactory
       buildName: build_cartsvc
       buildNumber: ${run_number}
   - name: checkoutsvc_build_info
     type: BuildInfo
     configuration:
-      sourceArtifactory: Artifactory_intergration
+      sourceArtifactory: artifactory
       buildName: build_checkoutsvc
       buildNumber: ${run_number} 
   - name: currencysvc_build_info
     type: BuildInfo
     configuration:
-      sourceArtifactory: Artifactory_intergration
+      sourceArtifactory: artifactory
       buildName: build_currencysvc
       buildNumber: ${run_number}
   - name: emailsvc_build_info
     type: BuildInfo
     configuration:
-      sourceArtifactory: Artifactory_intergration
+      sourceArtifactory: artifactory
       buildName: build_emailsvc
       buildNumber: ${run_number}
   - name: frontend_build_info
     type: BuildInfo
     configuration:
-      sourceArtifactory: Artifactory_intergration
+      sourceArtifactory: artifactory
       buildName: build_frontend
       buildNumber: ${run_number}
   - name: paymentsvc_build_info
     type: BuildInfo
     configuration:
-      sourceArtifactory: Artifactory_intergration
+      sourceArtifactory: artifactory
       buildName: build_paymentsvc
       buildNumber: ${run_number}
   - name: productcatalogsvc_build_info
     type: BuildInfo
     configuration:
-      sourceArtifactory: Artifactory_intergration
+      sourceArtifactory: artifactory
       buildName: build_sproductcatalog
       buildNumber: ${run_number}
   - name: recommendationsvc_build_info
     type: BuildInfo
     configuration:
-      sourceArtifactory: Artifactory_intergration
+      sourceArtifactory: artifactory
       buildName: build_recommendationsvc
       buildNumber: ${run_number}
   - name: shippingsvc_build_info
     type: BuildInfo
     configuration:
-      sourceArtifactory: Artifactory_intergration
+      sourceArtifactory: artifactory
       buildName: build_shippingsvc
       buildNumber: ${run_number}
   - name: loadgenerator_build_info
     type: BuildInfo
     configuration:
-      sourceArtifactory: Artifactory_intergration
+      sourceArtifactory: artifactory
       buildName: build_loadgensvc
       buildNumber: ${run_number}
