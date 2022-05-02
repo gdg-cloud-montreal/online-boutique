@@ -4,54 +4,76 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: source_repo
-      path: gdg-cloud-montreal/online-boutique/adservice
+      path: gdg-cloud-montreal/online-boutique
+      files:
+        include: adservice/*
   - name: cartsvc_repo
     type: GitRepo
     configuration:
       gitProvider: source_repo
-      path: gdg-cloud-montreal/online-boutique/cartservice
+      path: gdg-cloud-montreal/online-boutique
+      files:
+        include: cartservice/*
   - name: checkoutsvc_repo
     type: GitRepo
     configuration:
       gitProvider: source_repo
-      path: gdg-cloud-montreal/online-boutique/checkoutservice
+      path: gdg-cloud-montreal/online-boutique
+      files:
+        include: checkoutservice/*
   - name: currencysvc_repo
     type: GitRepo
     configuration:
       gitProvider: source_repo
-      path: gdg-cloud-montreal/online-boutique/currencyservice
+      path: gdg-cloud-montreal/online-boutique
+      files:
+        include: currencyservice/*
   - name: emailsvc_repo
     type: GitRepo
     configuration:
       gitProvider: source_repo
-      path: gdg-cloud-montreal/online-boutique/emailservice
+      path: gdg-cloud-montreal/online-boutique
+      files:
+        include: emailservice/*
   - name: frontendsvc_repo
     type: GitRepo
     configuration:
       gitProvider: source_repo
-      path: gdg-cloud-montreal/online-boutique/frontend
+      path: gdg-cloud-montreal/online-boutique
+      files:
+        include: frontend/*
   - name: paymentsvc_repo
     type: GitRepo
     configuration:
       gitProvider: source_repo
-      path: gdg-cloud-montreal/online-boutique/paymentservice
+      path: gdg-cloud-montreal/online-boutique
+      files:
+        include: paymentservice/*
   - name: productcatalogsvc_repo
     type: GitRepo
     configuration:
       gitProvider: source_repo
-      path: gdg-cloud-montreal/online-boutique/productcatalogservice
+      path: gdg-cloud-montreal/online-boutique
+      files:
+        include: productcatalogservice/*
   - name: recommendationsvc_repo
     type: GitRepo
     configuration:
       gitProvider: source_repo
-      path: gdg-cloud-montreal/online-boutique/recommendationservice
+      path: gdg-cloud-montreal/online-boutique
+      files:
+        include: recommendationservice/*
   - name: shippingsvc_repo
     type: GitRepo
     configuration:
       gitProvider: source_repo
-      path: gdg-cloud-montreal/online-boutique/shippingservice
+      path: gdg-cloud-montreal/online-boutique
+      files:
+        include: shippingservice/*
   - name: loadgensvc_repo
     type: GitRepo
     configuration:
       gitProvider: source_repo
-      path: gdg-cloud-montreal/online-boutique/loadgenerator
+      path: gdg-cloud-montreal/online-boutique
+      files:
+        include: loadgenerator/*
