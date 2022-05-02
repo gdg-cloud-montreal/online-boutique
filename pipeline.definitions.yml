@@ -407,7 +407,7 @@ pipelines:
         inputSteps:
           - name: build_loadgen
         outputResources:
-          - name: loadgen_build_info
+          - name: loadgenerator_build_info
     - name: xray_scan_loadgen
       type: XrayScan
       configuration:
@@ -416,5 +416,5 @@ pipelines:
         inputSteps:
           - name: build_loadgen
         inputResources:
-          - name: loadgen_build_info
+          - name: loadgenerator_build_info
             trigger: false
