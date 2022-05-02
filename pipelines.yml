@@ -27,7 +27,7 @@ pipelines:
           - name: Artifactory_intergration
           - name: server_name
         inputResources:
-          - name: source_code
+          - name: ApplicationRepo
     - name: push_frontend
       type: DockerPush
       configuration:
