@@ -1,22 +1,195 @@
-resources:
-  - name: ApplicationRepo
-    type: GitRepo
-    configuration:
-      gitProvider: Container_Build
-      path: gdg-cloud-montreal/online-boutique
-  - name: frontend_build_info
-    type: BuildInfo
-    configuration:
-      sourceArtifactory: Artifactory_intergration
-      buildName: build_frontend
-      buildNumber: ${run_number}
-  - name: shippingservice_build_info
-    type: BuildInfo
-    configuration:
-      sourceArtifactory: Artifactory_intergration
-      buildName: build_shippingservice
-      buildNumber: ${run_number}
 pipelines:
+# Individual Builds for Mono Repo
+  - name: build_boutique_adsvc
+    steps:
+    - name: build_adsvc
+      type: DockerBuild
+      configuration:
+        affinityGroup: fmkGroup
+        dockerFileLocation: adservice
+        dockerFileName: Dockerfile
+        dockerImageName: ${int_server_name_value}.jfrog.io/boutique/adservice
+        dockerImageTag: ${run_number}
+        dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
+        integrations:        
+          - name: Artifactory_intergration
+          - name: server_name
+        inputResources:
+          - name: adsvc_repo
+    - name: push_adsvc
+      type: DockerPush
+      configuration:
+        affinityGroup: fmkGroup
+        targetRepository: boutique
+        autoPublishBuildInfo: true
+        integrations:
+          - name: Artifactory_intergration
+        inputSteps:
+          - name: build_adsvc
+        outputResources:
+          - name: adsvc_build_info
+    - name: xray_scan_adsvc
+      type: XrayScan
+      configuration:
+        affinityGroup: fmkGroup
+        failOnScan: false
+        inputSteps:
+          - name: build_adsvc
+        inputResources:
+          - name: adsvc_build_info
+            trigger: false
+  - name: build_boutique_cartsvc
+    steps:
+    - name: build_cartsvc
+      type: DockerBuild
+      configuration:
+        affinityGroup: fmkGroup
+        dockerFileLocation: cartservice
+        dockerFileName: Dockerfile
+        dockerImageName: ${int_server_name_value}.jfrog.io/boutique/cartservice
+        dockerImageTag: ${run_number}
+        dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
+        integrations:        
+          - name: Artifactory_intergration
+          - name: server_name
+        inputResources:
+          - name: cartsvc_repo
+    - name: push_cartsvc
+      type: DockerPush
+      configuration:
+        affinityGroup: fmkGroup
+        targetRepository: boutique
+        autoPublishBuildInfo: true
+        integrations:
+          - name: Artifactory_intergration
+        inputSteps:
+          - name: build_cartsvc
+        outputResources:
+          - name: cartsvc_build_info
+    - name: xray_scan_cartsvc
+      type: XrayScan
+      configuration:
+        affinityGroup: fmkGroup
+        failOnScan: false
+        inputSteps:
+          - name: build_cartsvc
+        inputResources:
+          - name: cartsvc_build_info
+            trigger: false
+  - name: build_boutique_checkoutsvc
+    steps:
+    - name: build_checkoutsvc
+      type: DockerBuild
+      configuration:
+        affinityGroup: fmkGroup
+        dockerFileLocation: checkoutservice
+        dockerFileName: Dockerfile
+        dockerImageName: ${int_server_name_value}.jfrog.io/boutique/checkoutservice
+        dockerImageTag: ${run_number}
+        dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
+        integrations:        
+          - name: Artifactory_intergration
+          - name: server_name
+        inputResources:
+          - name: checkoutsvc_repo
+    - name: push_checkoutsvc
+      type: DockerPush
+      configuration:
+        affinityGroup: fmkGroup
+        targetRepository: boutique
+        autoPublishBuildInfo: true
+        integrations:
+          - name: Artifactory_intergration
+        inputSteps:
+          - name: build_checkoutsvc
+        outputResources:
+          - name: checkoutsvc_build_info
+    - name: xray_scan_checkoutsvc
+      type: XrayScan
+      configuration:
+        affinityGroup: fmkGroup
+        failOnScan: false
+        inputSteps:
+          - name: build_checkoutsvc
+        inputResources:
+          - name: checkoutsvc_build_info
+            trigger: false
+  - name: build_boutique_currencysvc
+    steps:
+    - name: build_currencysvc
+      type: DockerBuild
+      configuration:
+        affinityGroup: fmkGroup
+        dockerFileLocation: shippingservice
+        dockerFileName: Dockerfile
+        dockerImageName: ${int_server_name_value}.jfrog.io/boutique/shippingservice
+        dockerImageTag: ${run_number}
+        dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
+        integrations:        
+          - name: Artifactory_intergration
+          - name: server_name
+        inputResources:
+          - name: currencysvc_repo
+    - name: push_currencysvc
+      type: DockerPush
+      configuration:
+        affinityGroup: fmkGroup
+        targetRepository: boutique
+        autoPublishBuildInfo: true
+        integrations:
+          - name: Artifactory_intergration
+        inputSteps:
+          - name: build_currencysvc
+        outputResources:
+          - name: currencysvc_build_info
+    - name: xray_scan_currencysvc
+      type: XrayScan
+      configuration:
+        affinityGroup: fmkGroup
+        failOnScan: false
+        inputSteps:
+          - name: build_currencysvc
+        inputResources:
+          - name: currencysvc_build_info
+            trigger: false
+  - name: build_boutique_emailsvc
+    steps:
+    - name: build_emailsvc
+      type: DockerBuild
+      configuration:
+        affinityGroup: fmkGroup
+        dockerFileLocation: emailservice
+        dockerFileName: Dockerfile
+        dockerImageName: ${int_server_name_value}.jfrog.io/boutique/emailservice
+        dockerImageTag: ${run_number}
+        dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
+        integrations:        
+          - name: Artifactory_intergration
+          - name: server_name
+        inputResources:
+          - name: emailsvc_repo
+    - name: push_emailsvc
+      type: DockerPush
+      configuration:
+        affinityGroup: fmkGroup
+        targetRepository: boutique
+        autoPublishBuildInfo: true
+        integrations:
+          - name: Artifactory_intergration
+        inputSteps:
+          - name: build_emailsvc
+        outputResources:
+          - name: emailsvc_build_info
+    - name: xray_scan_emailsvc
+      type: XrayScan
+      configuration:
+        affinityGroup: fmkGroup
+        failOnScan: false
+        inputSteps:
+          - name: build_emailsvc
+        inputResources:
+          - name: emailsvc_build_info
+            trigger: false
   - name: build_boutique_frontend
     steps:
     - name: build_frontend
@@ -32,7 +205,7 @@ pipelines:
           - name: Artifactory_intergration
           - name: server_name
         inputResources:
-          - name: ApplicationRepo
+          - name: frontendsvc_repo
     - name: push_frontend
       type: DockerPush
       configuration:
@@ -54,10 +227,124 @@ pipelines:
           - name: build_frontend
         inputResources:
           - name: frontend_build_info
-            trigger: false
-  - name: build_boutique_shippingservice
+            trigger: false  
+  - name: build_boutique_paymentsvc
     steps:
-    - name: build_shippingservice
+    - name: build_paymentsvc
+      type: DockerBuild
+      configuration:
+        affinityGroup: fmkGroup
+        dockerFileLocation: paymentservice
+        dockerFileName: Dockerfile
+        dockerImageName: ${int_server_name_value}.jfrog.io/boutique/paymentservice
+        dockerImageTag: ${run_number}
+        dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
+        integrations:        
+          - name: Artifactory_intergration
+          - name: server_name
+        inputResources:
+          - name: paymentsvc_repo
+    - name: push_paymentsvc
+      type: DockerPush
+      configuration:
+        affinityGroup: fmkGroup
+        targetRepository: boutique
+        autoPublishBuildInfo: true
+        integrations:
+          - name: Artifactory_intergration
+        inputSteps:
+          - name: build_paymentsvc
+        outputResources:
+          - name: paymentsvc_build_info
+    - name: xray_scan_paymentsvc
+      type: XrayScan
+      configuration:
+        affinityGroup: fmkGroup
+        failOnScan: false
+        inputSteps:
+          - name: build_paymentsvc
+        inputResources:
+          - name: paymentsvc_build_info
+            trigger: false
+  - name: build_boutique_productcatalogsvc
+    steps:
+    - name: build_productcatalogsvc
+      type: DockerBuild
+      configuration:
+        affinityGroup: fmkGroup
+        dockerFileLocation: productcatalogservice
+        dockerFileName: Dockerfile
+        dockerImageName: ${int_server_name_value}.jfrog.io/boutique/productcatalogservice
+        dockerImageTag: ${run_number}
+        dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
+        integrations:        
+          - name: Artifactory_intergration
+          - name: server_name
+        inputResources:
+          - name: productcatalogsvc_repo
+    - name: push_productcatalogsvc
+      type: DockerPush
+      configuration:
+        affinityGroup: fmkGroup
+        targetRepository: boutique
+        autoPublishBuildInfo: true
+        integrations:
+          - name: Artifactory_intergration
+        inputSteps:
+          - name: build_productcatalogsvc
+        outputResources:
+          - name: productcatalogsvc_build_info
+    - name: xray_scan_productcatalogsvc
+      type: XrayScan
+      configuration:
+        affinityGroup: fmkGroup
+        failOnScan: false
+        inputSteps:
+          - name: build_productcatalogsvc
+        inputResources:
+          - name: productcatalogsvc_build_info
+            trigger: false
+  - name: build_boutique_recommendationsvc
+    steps:
+    - name: build_recommendationsvc
+      type: DockerBuild
+      configuration:
+        affinityGroup: fmkGroup
+        dockerFileLocation: recommendationservice
+        dockerFileName: Dockerfile
+        dockerImageName: ${int_server_name_value}.jfrog.io/boutique/recommendationservice
+        dockerImageTag: ${run_number}
+        dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
+        integrations:        
+          - name: Artifactory_intergration
+          - name: server_name
+        inputResources:
+          - name: recommendationsvc_repo
+    - name: push_recommendationsvc
+      type: DockerPush
+      configuration:
+        affinityGroup: fmkGroup
+        targetRepository: boutique
+        autoPublishBuildInfo: true
+        integrations:
+          - name: Artifactory_intergration
+        inputSteps:
+          - name: build_recommendationsvc
+        outputResources:
+          - name: recommendationsvc_build_info
+    - name: xray_scan_recommendationsvc
+      type: XrayScan
+      configuration:
+        affinityGroup: fmkGroup
+        failOnScan: false
+        inputSteps:
+          - name: build_recommendationsvc
+        inputResources:
+          - name: recommendationsvc_build_info
+            trigger: false
+  - name: build_boutique_shippingsvc
+    steps:
+    - name: build_shippingsvc
       type: DockerBuild
       configuration:
         affinityGroup: fmkGroup
@@ -70,8 +357,8 @@ pipelines:
           - name: Artifactory_intergration
           - name: server_name
         inputResources:
-          - name: ApplicationRepo
-    - name: push_shippingservice
+          - name: shippingsvc_repo
+    - name: push_shippingsvc
       type: DockerPush
       configuration:
         affinityGroup: fmkGroup
@@ -80,16 +367,54 @@ pipelines:
         integrations:
           - name: Artifactory_intergration
         inputSteps:
-          - name: build_shippingservice
+          - name: build_shippingsvc
         outputResources:
-          - name: shippingservice_build_info
-    - name: xray_scan_shippingservice
+          - name: shippingsvc_build_info
+    - name: xray_scan_shippingsvc
       type: XrayScan
       configuration:
         affinityGroup: fmkGroup
         failOnScan: false
         inputSteps:
-          - name: build_shippingservice
+          - name: build_shippingsvc
         inputResources:
-          - name: shippingservice_build_info
+          - name: shippingsvc_build_info
+            trigger: false
+  - name: build_boutique_loadgen
+    steps:
+    - name: build_loadgen
+      type: DockerBuild
+      configuration:
+        affinityGroup: fmkGroup
+        dockerFileLocation: loadgenerator
+        dockerFileName: Dockerfile
+        dockerImageName: ${int_server_name_value}.jfrog.io/boutique/loadgenerator
+        dockerImageTag: ${run_number}
+        dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
+        integrations:        
+          - name: Artifactory_intergration
+          - name: server_name
+        inputResources:
+          - name: loadgensvc_repo
+    - name: push_loadgen
+      type: DockerPush
+      configuration:
+        affinityGroup: fmkGroup
+        targetRepository: boutique
+        autoPublishBuildInfo: true
+        integrations:
+          - name: Artifactory_intergration
+        inputSteps:
+          - name: build_loadgen
+        outputResources:
+          - name: loadgen_build_info
+    - name: xray_scan_loadgen
+      type: XrayScan
+      configuration:
+        affinityGroup: fmkGroup
+        failOnScan: false
+        inputSteps:
+          - name: build_loadgen
+        inputResources:
+          - name: loadgen_build_info
             trigger: false

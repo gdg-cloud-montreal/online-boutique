@@ -1,0 +1,57 @@
+resources:
+#Repository Path configs for monorepo
+  - name: adsvc_repo
+    type: GitRepo
+    configuration:
+      gitProvider: Container_Build
+      path: gdg-cloud-montreal/online-boutique/adservice
+  - name: cartsvc_repo
+    type: GitRepo
+    configuration:
+      gitProvider: Container_Build
+      path: gdg-cloud-montreal/online-boutique/cartservice
+  - name: checkoutsvc_repo
+    type: GitRepo
+    configuration:
+      gitProvider: Container_Build
+      path: gdg-cloud-montreal/online-boutique/checkoutservice
+  - name: currencysvc_repo
+    type: GitRepo
+    configuration:
+      gitProvider: Container_Build
+      path: gdg-cloud-montreal/online-boutique/currencyservice
+  - name: emailsvc_repo
+    type: GitRepo
+    configuration:
+      gitProvider: Container_Build
+      path: gdg-cloud-montreal/online-boutique/emailservice
+  - name: frontendsvc_repo
+    type: GitRepo
+    configuration:
+      gitProvider: Container_Build
+      path: gdg-cloud-montreal/online-boutique/frontend
+  - name: paymentsvc_repo
+    type: GitRepo
+    configuration:
+      gitProvider: Container_Build
+      path: gdg-cloud-montreal/online-boutique/paymentservice
+  - name: productcatalogsvc_repo
+    type: GitRepo
+    configuration:
+      gitProvider: Container_Build
+      path: gdg-cloud-montreal/online-boutique/productcatalogservice
+  - name: recommendationsvc_repo
+    type: GitRepo
+    configuration:
+      gitProvider: Container_Build
+      path: gdg-cloud-montreal/online-boutique/recommendationservice
+  - name: shippingsvc_repo
+    type: GitRepo
+    configuration:
+      gitProvider: Container_Build
+      path: gdg-cloud-montreal/online-boutique/shippingservice
+  - name: loadgensvc_repo
+    type: GitRepo
+    configuration:
+      gitProvider: Container_Build
+      path: gdg-cloud-montreal/online-boutique/loadgenerator
