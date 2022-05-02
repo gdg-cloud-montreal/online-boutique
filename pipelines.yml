@@ -7,7 +7,7 @@ resources:
   - name: frontend_build_info
     type: BuildInfo
     configuration:
-      sourceArtifactory: artifactory-build-info
+      sourceArtifactory: Artifactory_intergration
       buildName: build_boutique
       buildNumber: ${run_number}
 
