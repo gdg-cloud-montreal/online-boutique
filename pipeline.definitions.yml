@@ -44,7 +44,7 @@ pipelines:
       type: DockerBuild
       configuration:
         affinityGroup: fmkGroup
-        dockerFileLocation: cartservice
+        dockerFileLocation: cartservice/src
         dockerFileName: Dockerfile
         dockerImageName: ${int_server_name_value}.jfrog.io/boutique/cartservice
         dockerImageTag: ${run_number}
