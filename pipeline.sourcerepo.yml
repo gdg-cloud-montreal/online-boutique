@@ -5,6 +5,10 @@ resources:
     configuration:
       gitProvider: source_repo
       path: gdg-cloud-montreal/online-boutique
+      buildOn:
+        commit:                true
+        pullRequestCreate:     true
+        releaseRequestCreate : true
       files:
         include: adservice/*
   - name: cartsvc_repo
@@ -12,6 +16,10 @@ resources:
     configuration:
       gitProvider: source_repo
       path: gdg-cloud-montreal/online-boutique
+      buildOn:
+        commit:                true
+        pullRequestCreate:     true
+        releaseRequestCreate : true
       files:
         include: cartservice/*
   - name: checkoutsvc_repo
@@ -19,6 +27,10 @@ resources:
     configuration:
       gitProvider: source_repo
       path: gdg-cloud-montreal/online-boutique
+      buildOn:
+        commit:                true
+        pullRequestCreate:     true
+        releaseRequestCreate : true
       files:
         include: checkoutservice/*
   - name: currencysvc_repo
@@ -26,6 +38,10 @@ resources:
     configuration:
       gitProvider: source_repo
       path: gdg-cloud-montreal/online-boutique
+      buildOn:
+        commit:                true
+        pullRequestCreate:     true
+        releaseRequestCreate : true
       files:
         include: currencyservice/*
   - name: emailsvc_repo
@@ -33,6 +49,10 @@ resources:
     configuration:
       gitProvider: source_repo
       path: gdg-cloud-montreal/online-boutique
+      buildOn:
+        commit:                true
+        pullRequestCreate:     true
+        releaseRequestCreate : true
       files:
         include: emailservice/*
   - name: frontendsvc_repo
@@ -40,6 +60,10 @@ resources:
     configuration:
       gitProvider: source_repo
       path: gdg-cloud-montreal/online-boutique
+      buildOn:
+        commit:                true
+        pullRequestCreate:     true
+        releaseRequestCreate : true
       files:
         include: frontend/*
   - name: paymentsvc_repo
@@ -47,6 +71,10 @@ resources:
     configuration:
       gitProvider: source_repo
       path: gdg-cloud-montreal/online-boutique
+      buildOn:
+        commit:                true
+        pullRequestCreate:     true
+        releaseRequestCreate : true
       files:
         include: paymentservice/*
   - name: productcatalogsvc_repo
@@ -54,6 +82,10 @@ resources:
     configuration:
       gitProvider: source_repo
       path: gdg-cloud-montreal/online-boutique
+      buildOn:
+        commit:                true
+        pullRequestCreate:     true
+        releaseRequestCreate : true
       files:
         include: productcatalogservice/*
   - name: recommendationsvc_repo
@@ -61,6 +93,10 @@ resources:
     configuration:
       gitProvider: source_repo
       path: gdg-cloud-montreal/online-boutique
+      buildOn:
+        commit:                true
+        pullRequestCreate:     true
+        releaseRequestCreate : true
       files:
         include: recommendationservice/*
   - name: shippingsvc_repo
@@ -68,6 +104,10 @@ resources:
     configuration:
       gitProvider: source_repo
       path: gdg-cloud-montreal/online-boutique
+      buildOn:
+        commit:                true
+        pullRequestCreate:     true
+        releaseRequestCreate : true
       files:
         include: shippingservice/*
   - name: loadgensvc_repo
@@ -75,5 +115,9 @@ resources:
     configuration:
       gitProvider: source_repo
       path: gdg-cloud-montreal/online-boutique
+      buildOn:
+        commit:                true
+        pullRequestCreate:     true
+        releaseRequestCreate : true
       files:
         include: loadgenerator/*
