@@ -42,7 +42,7 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         inputSteps:
-          - name: xray_scan_adsvc
+          - name: push_adsvc
         outputResources:
           - name: adsvc_build_info
   - name: build_boutique_cartsvc
@@ -87,7 +87,7 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         inputSteps:
-          - name: xray_scan_cartsvc
+          - name: push_cartsvc
         outputResources:
           - name: cartsvc_build_info
   - name: build_boutique_checkoutsvc
@@ -132,7 +132,7 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         inputSteps:
-          - name: xray_scan_checkoutsvc
+          - name: push_checkoutsvc
         outputResources:
           - name: checkoutsvc_build_info
   - name: build_boutique_currencysvc
@@ -176,7 +176,7 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         inputSteps:
-          - name: xray_scan_currencysvc
+          - name: push_currencysvc
         outputResources:
           - name: currencysvc_build_info
   - name: build_boutique_emailsvc
@@ -220,7 +220,7 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         inputSteps:
-          - name: xray_scan_emailsvc
+          - name: push_emailsvc
         outputResources:
           - name: emailsvc_build_info 
   - name: build_boutique_frontend
@@ -265,7 +265,7 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         inputSteps:
-          - name: xray_scan_frontend
+          - name: push_frontend
         outputResources:
           - name: frontend_build_info
   - name: build_boutique_paymentsvc
@@ -310,7 +310,7 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         inputSteps:
-          - name: xray_scan_paymentsvc
+          - name: push_paymentsvc
         outputResources:
           - name: paymentsvc_build_info
   - name: build_boutique_productcatalogsvc
@@ -355,7 +355,7 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         inputSteps:
-          - name: xray_scan_productcatalogsvc
+          - name: push_productcatalogsvc
         outputResources:
           - name: productcatalogsvc_build_info
   - name: build_boutique_recommendationsvc
@@ -400,7 +400,7 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         inputSteps:
-          - name: xray_scan_recommendationsvc
+          - name: push_recommendationsvc
         outputResources:
           - name: recommendationsvc_build_info
   - name: build_boutique_shippingsvc
@@ -445,7 +445,7 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         inputSteps:
-          - name: xray_scan_shippingsvc
+          - name: push_shippingsvc
         outputResources:
           - name: shippingsvc_build_info
   - name: build_boutique_loadgen
@@ -490,6 +490,6 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         inputSteps:
-          - name: xray_scan_loadgen
+          - name: push_loadgen
         outputResources:
           - name: loadgenerator_build_info
