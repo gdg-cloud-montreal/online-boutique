@@ -21,7 +21,6 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         targetRepository: boutique
-        autoPublishBuildInfo: true
         integrations:
           - name: artifactory
         inputSteps:
@@ -38,6 +37,14 @@ pipelines:
         inputResources:
           - name: adsvc_build_info
             trigger: false
+    - name: publish_adsvc_build
+      type: PublishBuildInfo
+      configuration:
+        affinityGroup: fmkGroup
+        inputSteps:
+          - name: xray_scan_adsvc
+        outputResources:
+          - name: adsvc_build_info
   - name: build_boutique_cartsvc
     steps:
     - name: build_cartsvc
@@ -59,7 +66,6 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         targetRepository: boutique
-        autoPublishBuildInfo: true
         integrations:
           - name: artifactory
         inputSteps:
@@ -76,6 +82,14 @@ pipelines:
         inputResources:
           - name: cartsvc_build_info
             trigger: false
+    - name: publish_cartsvc_build
+      type: PublishBuildInfo
+      configuration:
+        affinityGroup: fmkGroup
+        inputSteps:
+          - name: xray_scan_cartsvc
+        outputResources:
+          - name: cartsvc_build_info
   - name: build_boutique_checkoutsvc
     steps:
     - name: build_checkoutsvc
@@ -97,7 +111,6 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         targetRepository: boutique
-        autoPublishBuildInfo: true
         integrations:
           - name: artifactory
         inputSteps:
@@ -114,6 +127,14 @@ pipelines:
         inputResources:
           - name: checkoutsvc_build_info
             trigger: false
+      - name: publish_checkoutsvc_build
+      type: PublishBuildInfo
+      configuration:
+        affinityGroup: fmkGroup
+        inputSteps:
+          - name: xray_scan_checkoutsvc
+        outputResources:
+          - name: checkoutsvc_build_info
   - name: build_boutique_currencysvc
     steps:
     - name: build_currencysvc
@@ -135,7 +156,6 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         targetRepository: boutique
-        autoPublishBuildInfo: true
         integrations:
           - name: artifactory
         inputSteps:
@@ -151,7 +171,14 @@ pipelines:
           - name: build_currencysvc
         inputResources:
           - name: currencysvc_build_info
-            trigger: false
+     - name: publish_currencysvc_build
+      type: PublishBuildInfo
+      configuration:
+        affinityGroup: fmkGroup
+        inputSteps:
+          - name: xray_scan_currencysvc
+        outputResources:
+          - name: currencysvc_build_info
   - name: build_boutique_emailsvc
     steps:
     - name: build_emailsvc
@@ -173,7 +200,6 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         targetRepository: boutique
-        autoPublishBuildInfo: true
         integrations:
           - name: artifactory
         inputSteps:
@@ -189,7 +215,14 @@ pipelines:
           - name: build_emailsvc
         inputResources:
           - name: emailsvc_build_info
-            trigger: false
+    - name: publish_emailsvc_build
+      type: PublishBuildInfo
+      configuration:
+        affinityGroup: fmkGroup
+        inputSteps:
+          - name: xray_scan_emailsvc
+        outputResources:
+          - name: emailsvc_build_info 
   - name: build_boutique_frontend
     steps:
     - name: build_frontend
@@ -211,7 +244,6 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         targetRepository: boutique
-        autoPublishBuildInfo: true
         integrations:
           - name: artifactory
         inputSteps:
@@ -228,6 +260,14 @@ pipelines:
         inputResources:
           - name: frontend_build_info
             trigger: false  
+    - name: publish_frontend_build
+      type: PublishBuildInfo
+      configuration:
+        affinityGroup: fmkGroup
+        inputSteps:
+          - name: xray_scan_frontend
+        outputResources:
+          - name: frontend_build_info
   - name: build_boutique_paymentsvc
     steps:
     - name: build_paymentsvc
@@ -249,7 +289,6 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         targetRepository: boutique
-        autoPublishBuildInfo: true
         integrations:
           - name: artifactory
         inputSteps:
@@ -266,6 +305,14 @@ pipelines:
         inputResources:
           - name: paymentsvc_build_info
             trigger: false
+    - name: publish_paymentsvc_build
+      type: PublishBuildInfo
+      configuration:
+        affinityGroup: fmkGroup
+        inputSteps:
+          - name: xray_scan_paymentsvc
+        outputResources:
+          - name: paymentsvc_build_info
   - name: build_boutique_productcatalogsvc
     steps:
     - name: build_productcatalogsvc
@@ -287,7 +334,6 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         targetRepository: boutique
-        autoPublishBuildInfo: true
         integrations:
           - name: artifactory
         inputSteps:
@@ -304,6 +350,14 @@ pipelines:
         inputResources:
           - name: productcatalogsvc_build_info
             trigger: false
+    - name: publish_productcatalogsvc_build
+      type: PublishBuildInfo
+      configuration:
+        affinityGroup: fmkGroup
+        inputSteps:
+          - name: xray_scan_productcatalogsvc
+        outputResources:
+          - name: productcatalogsvc_build_info
   - name: build_boutique_recommendationsvc
     steps:
     - name: build_recommendationsvc
@@ -325,7 +379,6 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         targetRepository: boutique
-        autoPublishBuildInfo: true
         integrations:
           - name: artifactory
         inputSteps:
@@ -342,6 +395,14 @@ pipelines:
         inputResources:
           - name: recommendationsvc_build_info
             trigger: false
+    - name: publish_recommendationsvc_build
+      type: PublishBuildInfo
+      configuration:
+        affinityGroup: fmkGroup
+        inputSteps:
+          - name: xray_scan_recommendationsvc
+        outputResources:
+          - name: recommendationsvc_build_info
   - name: build_boutique_shippingsvc
     steps:
     - name: build_shippingsvc
@@ -363,7 +424,6 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         targetRepository: boutique
-        autoPublishBuildInfo: true
         integrations:
           - name: artifactory
         inputSteps:
@@ -380,6 +440,14 @@ pipelines:
         inputResources:
           - name: shippingsvc_build_info
             trigger: false
+    - name: publish_shippingsvc_build
+      type: PublishBuildInfo
+      configuration:
+        affinityGroup: fmkGroup
+        inputSteps:
+          - name: xray_scan_shippingsvc
+        outputResources:
+          - name: shippingsvc_build_info
   - name: build_boutique_loadgen
     steps:
     - name: build_loadgen
@@ -401,7 +469,6 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         targetRepository: boutique
-        autoPublishBuildInfo: true
         integrations:
           - name: artifactory
         inputSteps:
@@ -418,3 +485,11 @@ pipelines:
         inputResources:
           - name: loadgenerator_build_info
             trigger: false
+    - name: publish_loadgenerator_build
+      type: PublishBuildInfo
+      configuration:
+        affinityGroup: fmkGroup
+        inputSteps:
+          - name: xray_scan_loadgen
+        outputResources:
+          - name: loadgenerator_build_info
