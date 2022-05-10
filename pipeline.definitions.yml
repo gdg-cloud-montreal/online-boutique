@@ -127,7 +127,7 @@ pipelines:
         inputResources:
           - name: checkoutsvc_build_info
             trigger: false
-      - name: publish_checkoutsvc_build
+    - name: publish_checkoutsvc_build
       type: PublishBuildInfo
       configuration:
         affinityGroup: fmkGroup
@@ -171,7 +171,7 @@ pipelines:
           - name: build_currencysvc
         inputResources:
           - name: currencysvc_build_info
-     - name: publish_currencysvc_build
+    - name: publish_currencysvc_build
       type: PublishBuildInfo
       configuration:
         affinityGroup: fmkGroup
