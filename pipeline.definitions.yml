@@ -141,7 +141,7 @@ pipelines:
       type: DockerBuild
       configuration:
         affinityGroup: fmkGroup
-        dockerFileLocation: shippingservice
+        dockerFileLocation: currencyservice
         dockerFileName: Dockerfile
         dockerImageName: ${int_server_name_value}.jfrog.io/boutique/currencyservice
         dockerImageTag: ${run_number}
