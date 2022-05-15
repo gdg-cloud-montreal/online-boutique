@@ -1,6 +1,7 @@
 # Online Boutique 
 
 This repository contains the application source and JFrog pipeline artifacts for our swampUP 2022 talk "Accelerating Continuous delivery with DORA, Cloud Deploy and JFrog Pipelines" on May 26th, 2022
+See the [Infrastructure Repository](https://github.com/gdg-cloud-montreal/swampup-2022) for application deployment information
 
 ## Talk abstract
 
