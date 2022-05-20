@@ -8,7 +8,12 @@ resources:
   type: PropertyBag
   configuration:
     commitSha: 
-    commiterLogin:  
+    commiterLogin:
+- name: checkout_propertybag
+  type: PropertyBag
+  configuration:
+    commitSha: 
+    commiterLogin: 
 - name: currency_propertybag
   type: PropertyBag
   configuration:
