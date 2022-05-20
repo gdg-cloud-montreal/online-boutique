@@ -2,6 +2,16 @@ pipelines:
 # Individual Builds for Mono Repo
   - name: build_boutique_adsvc
     steps:
+    - name: extra_buildInfo
+      type: Bash
+      configuration:
+        inputResources:
+          - name: adsvc_repo
+        outputResources:
+          - name: ads_propertybag
+      execution:
+        onExecute:
+          - write_output ads_propertybag commitSha=$res_adsvc_repo_commitSha commiterLogin=$res_adsvc_repo_committerLogin
     - name: build_adsvc
       type: DockerBuild
       configuration:
@@ -47,6 +57,16 @@ pipelines:
           - name: adsvc_build_info
   - name: build_boutique_cartsvc
     steps:
+    - name: extra_buildInfo
+      type: Bash
+      configuration:
+        inputResources:
+          - name: cartsvc_repo
+        outputResources:
+          - name: cart_propertybag
+      execution:
+        onExecute:
+          - write_output cart_propertybag commitSha=$res_cartsvc_repo_commitSha commiterLogin=$res_cartsvc_repocommitterLogin
     - name: build_cartsvc
       type: DockerBuild
       configuration:
@@ -92,6 +112,16 @@ pipelines:
           - name: cartsvc_build_info
   - name: build_boutique_checkoutsvc
     steps:
+    - name: extra_buildInfo
+      type: Bash
+      configuration:
+        inputResources:
+          - name: checkoutsvc_repo
+        outputResources:
+          - name: checkout_propertybag
+      execution:
+        onExecute:
+          - write_output checkout_propertybag commitSha=$res_checkoutsvc_repo_commitSha commiterLogin=$res_checkoutsvc_repo_committerLogin
     - name: build_checkoutsvc
       type: DockerBuild
       configuration:
@@ -137,6 +167,16 @@ pipelines:
           - name: checkoutsvc_build_info
   - name: build_boutique_currencysvc
     steps:
+    - name: extra_buildInfo
+      type: Bash
+      configuration:
+        inputResources:
+          - name: currencysvc_repo
+        outputResources:
+          - name: currency_propertybag
+      execution:
+        onExecute:
+          - write_output currencysvc_repo commitSha=$res_currencysvc_repo_commitSha commiterLogin=$res_currencysvc_repo_committerLogin
     - name: build_currencysvc
       type: DockerBuild
       configuration:
@@ -181,6 +221,16 @@ pipelines:
           - name: currencysvc_build_info
   - name: build_boutique_emailsvc
     steps:
+    - name: extra_buildInfo
+      type: Bash
+      configuration:
+        inputResources:
+          - name: emailsvc_repo
+        outputResources:
+          - name: email_propertybag
+      execution:
+        onExecute:
+          - write_output email_propertybag commitSha=$res_emailsvc_repo_commitSha commiterLogin=$res_emailsvc_repo_committerLogin
     - name: build_emailsvc
       type: DockerBuild
       configuration:
@@ -225,6 +275,16 @@ pipelines:
           - name: emailsvc_build_info 
   - name: build_boutique_frontend
     steps:
+    - name: extra_buildInfo
+      type: Bash
+      configuration:
+        inputResources:
+          - name: frontendsvc_repo
+        outputResources:
+          - name: frontend_propertybag
+      execution:
+        onExecute:
+          - write_output frontend_propertybag commitSha=$res_frontendsvc_repo_commitSha commiterLogin=$res_frontendsvc_repo_committerLogin
     - name: build_frontend
       type: DockerBuild
       configuration:
@@ -270,6 +330,16 @@ pipelines:
           - name: frontend_build_info
   - name: build_boutique_paymentsvc
     steps:
+    - name: extra_buildInfo
+      type: Bash
+      configuration:
+        inputResources:
+          - name: paymentsvc_repo
+        outputResources:
+          - name: payment_propertybag
+      execution:
+        onExecute:
+          - write_output payment_propertybag commitSha=$res_paymentsvc_repoo_commitSha commiterLogin=$res_paymentsvc_repo_committerLogin
     - name: build_paymentsvc
       type: DockerBuild
       configuration:
@@ -315,6 +385,16 @@ pipelines:
           - name: paymentsvc_build_info
   - name: build_boutique_productcatalogsvc
     steps:
+    - name: extra_buildInfo
+      type: Bash
+      configuration:
+        inputResources:
+          - name: productcatalogsvc_repo
+        outputResources:
+          - name: product_propertybag
+      execution:
+        onExecute:
+          - write_output product_propertybag commitSha=$res_productcatalogsvc_repo_commitSha commiterLogin=$res_productcatalogsvc_repo_committerLogin
     - name: build_productcatalogsvc
       type: DockerBuild
       configuration:
@@ -360,6 +440,16 @@ pipelines:
           - name: productcatalogsvc_build_info
   - name: build_boutique_recommendationsvc
     steps:
+    - name: extra_buildInfo
+      type: Bash
+      configuration:
+        inputResources:
+          - name: recommendationsvc_repo
+        outputResources:
+          - name: recommendations_propertybag
+      execution:
+        onExecute:
+          - write_output recommendations_propertybag commitSha=$res_recommendationsvc_repo_commitSha commiterLogin=$res_recommendationsvc_repo_committerLogin
     - name: build_recommendationsvc
       type: DockerBuild
       configuration:
@@ -405,6 +495,16 @@ pipelines:
           - name: recommendationsvc_build_info
   - name: build_boutique_shippingsvc
     steps:
+    - name: extra_buildInfo
+      type: Bash
+      configuration:
+        inputResources:
+          - name: shippingsvc_repo
+        outputResources:
+          - name: shipping_propertybag
+      execution:
+        onExecute:
+          - write_output shipping_propertybag commitSha=$res_shippingsvc_repo_commitSha commiterLogin=$res_shippingsvc_repo_committerLogin
     - name: build_shippingsvc
       type: DockerBuild
       configuration:
@@ -450,6 +550,16 @@ pipelines:
           - name: shippingsvc_build_info
   - name: build_boutique_loadgen
     steps:
+    - name: extra_buildInfo
+      type: Bash
+      configuration:
+        inputResources:
+          - name: loadgensvc_repo
+        outputResources:
+          - name: load_propertybag
+      execution:
+        onExecute:
+          - write_output load_propertybag commitSha=$res_loadgensvc_repo_commitSha commiterLogin=$res_loadgensvc_repo_committerLogin
     - name: build_loadgen
       type: DockerBuild
       configuration:
@@ -493,3 +603,22 @@ pipelines:
           - name: push_loadgen
         outputResources:
           - name: loadgenerator_build_info
+
+
+
+      - name: p1_s3
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: p1_s2
+          outputResources:
+            - name: myPropertyBag
+        execution:
+          onExecute:
+            - echo $current_runid
+            # Writes current run number to pipeline state
+            - add_pipeline_variables prev_runid=$run_id
+            # Uses an utility function to update the output resource with the commitSha that triggered this run
+            # Dependent pipelines can be configured to trigger when this resource is updated
+            # Utility functions documentation: https://www.jfrog.com/confluence/display/JFROG/Pipelines+Utility+Functions
+            - write_output myPropertyBag commitSha=$commitSha runID=$current_runid

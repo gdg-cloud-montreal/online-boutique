@@ -1,0 +1,51 @@
+
+- name: ads_propertybag
+  type: PropertyBag
+  configuration:
+    commitSha: 
+    commiterLogin:  
+- name: cart_propertybag
+  type: PropertyBag
+  configuration:
+    commitSha: 
+    commiterLogin:  
+- name: currency_propertybag
+  type: PropertyBag
+  configuration:
+    commitSha: 
+    commiterLogin:  
+- name: email_propertybag
+  type: PropertyBag
+  configuration:
+    commitSha: 
+    commiterLogin:  
+- name: frontend_propertybag
+  type: PropertyBag
+  configuration:
+    commitSha: 
+    commiterLogin:  
+- name: payment_propertybag
+  type: PropertyBag
+  configuration:
+    commitSha: 
+    commiterLogin:
+- name: product_propertybag
+  type: PropertyBag
+  configuration:
+    commitSha: 
+    commiterLogin:  
+- name: recommendations_propertybag
+  type: PropertyBag
+  configuration:
+    commitSha: 
+    commiterLogin:  
+- name: shipping_propertybag
+  type: PropertyBag
+  configuration:
+    commitSha: 
+    commiterLogin: 
+- name: load_propertybag
+  type: PropertyBag
+  configuration:
+    commitSha: 
+    commiterLogin: 
