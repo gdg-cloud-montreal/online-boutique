@@ -1,4 +1,4 @@
-
+resources:
 - name: ads_propertybag
   type: PropertyBag
   configuration:
