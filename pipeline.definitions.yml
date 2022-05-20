@@ -403,7 +403,7 @@ pipelines:
       type: Bash
       configuration:
         inputSteps:
-          - name: publish_prodcutcatalogsvc_build
+          - name: publish_productcatalogsvc_build
         inputResources:
           - name: productcatalogsvc_repo
         outputResources:
