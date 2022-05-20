@@ -5,6 +5,8 @@ pipelines:
     - name: extra_buildInfo
       type: Bash
       configuration:
+        inputSteps:
+          - name: publish_adsvc_build
         inputResources:
           - name: adsvc_repo
         outputResources:
@@ -60,6 +62,8 @@ pipelines:
     - name: extra_buildInfo
       type: Bash
       configuration:
+        inputSteps:
+          - name: publish_cartsvc_build
         inputResources:
           - name: cartsvc_repo
         outputResources:
@@ -115,6 +119,8 @@ pipelines:
     - name: extra_buildInfo
       type: Bash
       configuration:
+        inputSteps:
+          - name: publish_checkoutsvc_build
         inputResources:
           - name: checkoutsvc_repo
         outputResources:
@@ -170,6 +176,8 @@ pipelines:
     - name: extra_buildInfo
       type: Bash
       configuration:
+        inputSteps:
+          - name: publish_currencysvc_build
         inputResources:
           - name: currencysvc_repo
         outputResources:
@@ -224,6 +232,8 @@ pipelines:
     - name: extra_buildInfo
       type: Bash
       configuration:
+        inputSteps:
+          - name: publish_emailsvc_build
         inputResources:
           - name: emailsvc_repo
         outputResources:
@@ -278,6 +288,8 @@ pipelines:
     - name: extra_buildInfo
       type: Bash
       configuration:
+        inputSteps:
+          - name: publish_frontend_build
         inputResources:
           - name: frontendsvc_repo
         outputResources:
@@ -333,6 +345,8 @@ pipelines:
     - name: extra_buildInfo
       type: Bash
       configuration:
+        inputSteps:
+          - name: publish_paymentsvc_build
         inputResources:
           - name: paymentsvc_repo
         outputResources:
@@ -388,6 +402,8 @@ pipelines:
     - name: extra_buildInfo
       type: Bash
       configuration:
+        inputSteps:
+          - name: publish_prodcutcatalogsvc_build
         inputResources:
           - name: productcatalogsvc_repo
         outputResources:
@@ -443,6 +459,8 @@ pipelines:
     - name: extra_buildInfo
       type: Bash
       configuration:
+        inputSteps:
+          - name: publish_recommendationsvc_build
         inputResources:
           - name: recommendationsvc_repo
         outputResources:
@@ -498,6 +516,8 @@ pipelines:
     - name: extra_buildInfo
       type: Bash
       configuration:
+        inputSteps:
+          - name: publish_shippingsvc_build
         inputResources:
           - name: shippingsvc_repo
         outputResources:
@@ -553,6 +573,8 @@ pipelines:
     - name: extra_buildInfo
       type: Bash
       configuration:
+        inputSteps:
+          - name: publish_loadgenerator_build
         inputResources:
           - name: loadgensvc_repo
         outputResources:
