@@ -3,54 +3,65 @@ resources:
   type: PropertyBag
   configuration:
     commitSha: 
-    commiterLogin:  
+    commiterLogin: 
+    imageTag: 
 - name: cart_propertybag
   type: PropertyBag
   configuration:
     commitSha: 
     commiterLogin:
+    imageTag:
 - name: checkout_propertybag
   type: PropertyBag
   configuration:
     commitSha: 
     commiterLogin: 
+    imageTag: 
 - name: currency_propertybag
   type: PropertyBag
   configuration:
     commitSha: 
     commiterLogin:  
+    imageTag: 
 - name: email_propertybag
   type: PropertyBag
   configuration:
     commitSha: 
     commiterLogin:  
+    imageTag: 
 - name: frontend_propertybag
   type: PropertyBag
   configuration:
     commitSha: 
     commiterLogin:  
+    imageTag: 
 - name: payment_propertybag
   type: PropertyBag
   configuration:
     commitSha: 
     commiterLogin:
+    imageTag: 
 - name: product_propertybag
   type: PropertyBag
   configuration:
     commitSha: 
     commiterLogin:  
+    imageTag: 
 - name: recommendations_propertybag
   type: PropertyBag
   configuration:
     commitSha: 
     commiterLogin:  
+    imageTag: 
 - name: shipping_propertybag
   type: PropertyBag
   configuration:
     commitSha: 
     commiterLogin: 
+    imageTag: 
 - name: load_propertybag
   type: PropertyBag
   configuration:
     commitSha: 
     commiterLogin: 
+    imageTag: 

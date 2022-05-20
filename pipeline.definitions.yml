@@ -6,14 +6,14 @@ pipelines:
       type: Bash
       configuration:
         inputSteps:
-          - name: publish_adsvc_build
+          - name: xray_scan_adsvc
         inputResources:
           - name: adsvc_repo
         outputResources:
           - name: ads_propertybag
       execution:
         onExecute:
-          - write_output ads_propertybag commitSha=$res_adsvc_repo_commitSha commiterLogin=$res_adsvc_repo_committerLogin
+          - write_output ads_propertybag imageTag=$res_adsvc_build_info_buildNumber commitSha=$res_adsvc_repo_commitSha commiterLogin=$res_adsvc_repo_committerLogin
     - name: build_adsvc
       type: DockerBuild
       configuration:
@@ -49,28 +49,21 @@ pipelines:
         inputResources:
           - name: adsvc_build_info
             trigger: false
-    - name: publish_adsvc_build
-      type: PublishBuildInfo
-      configuration:
-        affinityGroup: fmkGroup
-        inputSteps:
-          - name: push_adsvc
-        outputResources:
-          - name: adsvc_build_info
+   
   - name: build_boutique_cartsvc
     steps:
     - name: extra_buildInfo
       type: Bash
       configuration:
         inputSteps:
-          - name: publish_cartsvc_build
+          - name: xray_scan_cartsvc
         inputResources:
           - name: cartsvc_repo
         outputResources:
           - name: cart_propertybag
       execution:
         onExecute:
-          - write_output cart_propertybag commitSha=$res_cartsvc_repo_commitSha commiterLogin=$res_cartsvc_repocommitterLogin
+          - write_output cart_propertybag imageTag=$res_cartsvc_build_info_buildNumber commitSha=$res_cartsvc_repo_commitSha commiterLogin=$res_cartsvc_repocommitterLogin
     - name: build_cartsvc
       type: DockerBuild
       configuration:
@@ -106,28 +99,21 @@ pipelines:
         inputResources:
           - name: cartsvc_build_info
             trigger: false
-    - name: publish_cartsvc_build
-      type: PublishBuildInfo
-      configuration:
-        affinityGroup: fmkGroup
-        inputSteps:
-          - name: push_cartsvc
-        outputResources:
-          - name: cartsvc_build_info
+
   - name: build_boutique_checkoutsvc
     steps:
     - name: extra_buildInfo
       type: Bash
       configuration:
         inputSteps:
-          - name: publish_checkoutsvc_build
+          - name: xray_scan_checkoutsvc
         inputResources:
           - name: checkoutsvc_repo
         outputResources:
           - name: checkout_propertybag
       execution:
         onExecute:
-          - write_output checkout_propertybag commitSha=$res_checkoutsvc_repo_commitSha commiterLogin=$res_checkoutsvc_repo_committerLogin
+          - write_output checkout_propertybag imageTag=$res_checkoutsvc_build_info_buildNumber commitSha=$res_checkoutsvc_repo_commitSha commiterLogin=$res_checkoutsvc_repo_committerLogin
     - name: build_checkoutsvc
       type: DockerBuild
       configuration:
@@ -163,28 +149,21 @@ pipelines:
         inputResources:
           - name: checkoutsvc_build_info
             trigger: false
-    - name: publish_checkoutsvc_build
-      type: PublishBuildInfo
-      configuration:
-        affinityGroup: fmkGroup
-        inputSteps:
-          - name: push_checkoutsvc
-        outputResources:
-          - name: checkoutsvc_build_info
+
   - name: build_boutique_currencysvc
     steps:
     - name: extra_buildInfo
       type: Bash
       configuration:
         inputSteps:
-          - name: publish_currencysvc_build
+          - name: xray_scan_currencysvc
         inputResources:
           - name: currencysvc_repo
         outputResources:
           - name: currency_propertybag
       execution:
         onExecute:
-          - write_output currencysvc_repo commitSha=$res_currencysvc_repo_commitSha commiterLogin=$res_currencysvc_repo_committerLogin
+          - write_output currencysvc_repo imageTag=$res_currencysvc_build_info_buildNumber commitSha=$res_currencysvc_repo_commitSha commiterLogin=$res_currencysvc_repo_committerLogin
     - name: build_currencysvc
       type: DockerBuild
       configuration:
@@ -219,28 +198,21 @@ pipelines:
           - name: build_currencysvc
         inputResources:
           - name: currencysvc_build_info
-    - name: publish_currencysvc_build
-      type: PublishBuildInfo
-      configuration:
-        affinityGroup: fmkGroup
-        inputSteps:
-          - name: push_currencysvc
-        outputResources:
-          - name: currencysvc_build_info
+
   - name: build_boutique_emailsvc
     steps:
     - name: extra_buildInfo
       type: Bash
       configuration:
         inputSteps:
-          - name: publish_emailsvc_build
+          - name: xray_scan_emailsvc
         inputResources:
           - name: emailsvc_repo
         outputResources:
           - name: email_propertybag
       execution:
         onExecute:
-          - write_output email_propertybag commitSha=$res_emailsvc_repo_commitSha commiterLogin=$res_emailsvc_repo_committerLogin
+          - write_output email_propertybag imageTag=$res_emailsvc_build_info_buildNumber commitSha=$res_emailsvc_repo_commitSha commiterLogin=$res_emailsvc_repo_committerLogin
     - name: build_emailsvc
       type: DockerBuild
       configuration:
@@ -275,28 +247,21 @@ pipelines:
           - name: build_emailsvc
         inputResources:
           - name: emailsvc_build_info
-    - name: publish_emailsvc_build
-      type: PublishBuildInfo
-      configuration:
-        affinityGroup: fmkGroup
-        inputSteps:
-          - name: push_emailsvc
-        outputResources:
-          - name: emailsvc_build_info 
+
   - name: build_boutique_frontend
     steps:
     - name: extra_buildInfo
       type: Bash
       configuration:
         inputSteps:
-          - name: publish_frontend_build
+          - name: xray_scan_frontend
         inputResources:
           - name: frontendsvc_repo
         outputResources:
           - name: frontend_propertybag
       execution:
         onExecute:
-          - write_output frontend_propertybag commitSha=$res_frontendsvc_repo_commitSha commiterLogin=$res_frontendsvc_repo_committerLogin
+          - write_output frontend_propertybag imageTag=$res_frontend_build_info_buildNumber commitSha=$res_frontendsvc_repo_commitSha commiterLogin=$res_frontendsvc_repo_committerLogin
     - name: build_frontend
       type: DockerBuild
       configuration:
@@ -332,28 +297,21 @@ pipelines:
         inputResources:
           - name: frontend_build_info
             trigger: false  
-    - name: publish_frontend_build
-      type: PublishBuildInfo
-      configuration:
-        affinityGroup: fmkGroup
-        inputSteps:
-          - name: push_frontend
-        outputResources:
-          - name: frontend_build_info
+
   - name: build_boutique_paymentsvc
     steps:
     - name: extra_buildInfo
       type: Bash
       configuration:
         inputSteps:
-          - name: publish_paymentsvc_build
+          - name: xray_scan_paymentsvc
         inputResources:
           - name: paymentsvc_repo
         outputResources:
           - name: payment_propertybag
       execution:
         onExecute:
-          - write_output payment_propertybag commitSha=$res_paymentsvc_repoo_commitSha commiterLogin=$res_paymentsvc_repo_committerLogin
+          - write_output payment_propertybag imageTag=$res_paymentsvc_build_info_buildNumber commitSha=$res_paymentsvc_repoo_commitSha commiterLogin=$res_paymentsvc_repo_committerLogin
     - name: build_paymentsvc
       type: DockerBuild
       configuration:
@@ -389,14 +347,7 @@ pipelines:
         inputResources:
           - name: paymentsvc_build_info
             trigger: false
-    - name: publish_paymentsvc_build
-      type: PublishBuildInfo
-      configuration:
-        affinityGroup: fmkGroup
-        inputSteps:
-          - name: push_paymentsvc
-        outputResources:
-          - name: paymentsvc_build_info
+
   - name: build_boutique_productcatalogsvc
     steps:
     - name: extra_buildInfo
@@ -460,14 +411,14 @@ pipelines:
       type: Bash
       configuration:
         inputSteps:
-          - name: publish_recommendationsvc_build
+          - name: xray_scan_recommendationsvc
         inputResources:
           - name: recommendationsvc_repo
         outputResources:
           - name: recommendations_propertybag
       execution:
         onExecute:
-          - write_output recommendations_propertybag commitSha=$res_recommendationsvc_repo_commitSha commiterLogin=$res_recommendationsvc_repo_committerLogin
+          - write_output recommendations_propertybag imageTag=$res_recommendationsvc_build_info_buildNumber commitSha=$res_recommendationsvc_repo_commitSha commiterLogin=$res_recommendationsvc_repo_committerLogin
     - name: build_recommendationsvc
       type: DockerBuild
       configuration:
@@ -503,28 +454,21 @@ pipelines:
         inputResources:
           - name: recommendationsvc_build_info
             trigger: false
-    - name: publish_recommendationsvc_build
-      type: PublishBuildInfo
-      configuration:
-        affinityGroup: fmkGroup
-        inputSteps:
-          - name: push_recommendationsvc
-        outputResources:
-          - name: recommendationsvc_build_info
+
   - name: build_boutique_shippingsvc
     steps:
     - name: extra_buildInfo
       type: Bash
       configuration:
         inputSteps:
-          - name: publish_shippingsvc_build
+          - name: xray_scan_shippingsvc
         inputResources:
           - name: shippingsvc_repo
         outputResources:
           - name: shipping_propertybag
       execution:
         onExecute:
-          - write_output shipping_propertybag commitSha=$res_shippingsvc_repo_commitSha commiterLogin=$res_shippingsvc_repo_committerLogin
+          - write_output shipping_propertybag imageTag=$res_shippingsvc_build_info_buildNumber commitSha=$res_shippingsvc_repo_commitSha commiterLogin=$res_shippingsvc_repo_committerLogin
     - name: build_shippingsvc
       type: DockerBuild
       configuration:
@@ -560,28 +504,21 @@ pipelines:
         inputResources:
           - name: shippingsvc_build_info
             trigger: false
-    - name: publish_shippingsvc_build
-      type: PublishBuildInfo
-      configuration:
-        affinityGroup: fmkGroup
-        inputSteps:
-          - name: push_shippingsvc
-        outputResources:
-          - name: shippingsvc_build_info
+
   - name: build_boutique_loadgen
     steps:
     - name: extra_buildInfo
       type: Bash
       configuration:
         inputSteps:
-          - name: publish_loadgenerator_build
+          - name: xray_scan_loadgen
         inputResources:
           - name: loadgensvc_repo
         outputResources:
           - name: load_propertybag
       execution:
         onExecute:
-          - write_output load_propertybag commitSha=$res_loadgensvc_repo_commitSha commiterLogin=$res_loadgensvc_repo_committerLogin
+          - write_output load_propertybag imageTag=$res_loadgenerator_build_info_buildNumber commitSha=$res_loadgensvc_repo_commitSha commiterLogin=$res_loadgensvc_repo_committerLogin
     - name: build_loadgen
       type: DockerBuild
       configuration:
@@ -617,11 +554,4 @@ pipelines:
         inputResources:
           - name: loadgenerator_build_info
             trigger: false
-    - name: publish_loadgenerator_build
-      type: PublishBuildInfo
-      configuration:
-        affinityGroup: fmkGroup
-        inputSteps:
-          - name: push_loadgen
-        outputResources:
-          - name: loadgenerator_build_info
+
