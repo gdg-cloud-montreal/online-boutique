@@ -361,7 +361,7 @@ pipelines:
           - name: product_propertybag
       execution:
         onExecute:
-          - write_output product_propertybag commitSha=$res_productcatalogsvc_repo_commitSha commiterLogin=$res_productcatalogsvc_repo_committerLogin
+          - write_output product_propertybag imageTag=$res_productcatalogsvc_build_info_buildNumber commitSha=$res_productcatalogsvc_repo_commitSha commiterLogin=$res_productcatalogsvc_repo_committerLogin
     - name: build_productcatalogsvc
       type: DockerBuild
       configuration:
