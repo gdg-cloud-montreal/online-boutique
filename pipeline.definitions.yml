@@ -163,7 +163,7 @@ pipelines:
           - name: currency_propertybag
       execution:
         onExecute:
-          - write_output currencysvc_repo imageTag=${run_number} commitSha=$res_currencysvc_repo_commitSha commiterLogin=$res_currencysvc_repo_committerLogin
+          - write_output currency_propertybag imageTag=${run_number} commitSha=$res_currencysvc_repo_commitSha commiterLogin=$res_currencysvc_repo_committerLogin
     - name: build_currencysvc
       type: DockerBuild
       configuration:
