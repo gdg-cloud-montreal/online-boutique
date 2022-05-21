@@ -13,7 +13,7 @@ pipelines:
           - name: ads_propertybag
       execution:
         onExecute:
-          - write_output ads_propertybag imageTag=$res_adsvc_build_info_buildNumber commitSha=$res_adsvc_repo_commitSha commiterLogin=$res_adsvc_repo_committerLogin
+          - write_output ads_propertybag imageTag=${run_number} commitSha=$res_adsvc_repo_commitSha commiterLogin=$res_adsvc_repo_committerLogin
     - name: build_adsvc
       type: DockerBuild
       configuration:
@@ -63,7 +63,7 @@ pipelines:
           - name: cart_propertybag
       execution:
         onExecute:
-          - write_output cart_propertybag imageTag=$res_cartsvc_build_info_buildNumber commitSha=$res_cartsvc_repo_commitSha commiterLogin=$res_cartsvc_repocommitterLogin
+          - write_output cart_propertybag imageTag=${run_number} commitSha=$res_cartsvc_repo_commitSha commiterLogin=$res_cartsvc_repocommitterLogin
     - name: build_cartsvc
       type: DockerBuild
       configuration:
@@ -113,7 +113,7 @@ pipelines:
           - name: checkout_propertybag
       execution:
         onExecute:
-          - write_output checkout_propertybag imageTag=$res_checkoutsvc_build_info_buildNumber commitSha=$res_checkoutsvc_repo_commitSha commiterLogin=$res_checkoutsvc_repo_committerLogin
+          - write_output checkout_propertybag imageTag=${run_number} commitSha=$res_checkoutsvc_repo_commitSha commiterLogin=$res_checkoutsvc_repo_committerLogin
     - name: build_checkoutsvc
       type: DockerBuild
       configuration:
@@ -163,7 +163,7 @@ pipelines:
           - name: currency_propertybag
       execution:
         onExecute:
-          - write_output currencysvc_repo imageTag=$res_currencysvc_build_info_buildNumber commitSha=$res_currencysvc_repo_commitSha commiterLogin=$res_currencysvc_repo_committerLogin
+          - write_output currencysvc_repo imageTag=${run_number} commitSha=$res_currencysvc_repo_commitSha commiterLogin=$res_currencysvc_repo_committerLogin
     - name: build_currencysvc
       type: DockerBuild
       configuration:
@@ -212,7 +212,7 @@ pipelines:
           - name: email_propertybag
       execution:
         onExecute:
-          - write_output email_propertybag imageTag=$res_emailsvc_build_info_buildNumber commitSha=$res_emailsvc_repo_commitSha commiterLogin=$res_emailsvc_repo_committerLogin
+          - write_output email_propertybag imageTag=${run_number} commitSha=$res_emailsvc_repo_commitSha commiterLogin=$res_emailsvc_repo_committerLogin
     - name: build_emailsvc
       type: DockerBuild
       configuration:
@@ -261,7 +261,7 @@ pipelines:
           - name: frontend_propertybag
       execution:
         onExecute:
-          - write_output frontend_propertybag imageTag=$res_frontend_build_info_buildNumber commitSha=$res_frontendsvc_repo_commitSha commiterLogin=$res_frontendsvc_repo_committerLogin
+          - write_output frontend_propertybag imageTag=${run_number} commitSha=$res_frontendsvc_repo_commitSha commiterLogin=$res_frontendsvc_repo_committerLogin
     - name: build_frontend
       type: DockerBuild
       configuration:
@@ -311,7 +311,7 @@ pipelines:
           - name: payment_propertybag
       execution:
         onExecute:
-          - write_output payment_propertybag imageTag=$res_paymentsvc_build_info_buildNumber commitSha=$res_paymentsvc_repoo_commitSha commiterLogin=$res_paymentsvc_repo_committerLogin
+          - write_output payment_propertybag imageTag=${run_number} commitSha=$res_paymentsvc_repoo_commitSha commiterLogin=$res_paymentsvc_repo_committerLogin
     - name: build_paymentsvc
       type: DockerBuild
       configuration:
@@ -361,7 +361,7 @@ pipelines:
           - name: product_propertybag
       execution:
         onExecute:
-          - write_output product_propertybag imageTag=$res_productcatalogsvc_build_info_buildNumber commitSha=$res_productcatalogsvc_repo_commitSha commiterLogin=$res_productcatalogsvc_repo_committerLogin
+          - write_output product_propertybag imageTag=${run_number}commitSha=$res_productcatalogsvc_repo_commitSha commiterLogin=$res_productcatalogsvc_repo_committerLogin
     - name: build_productcatalogsvc
       type: DockerBuild
       configuration:
@@ -418,7 +418,7 @@ pipelines:
           - name: recommendations_propertybag
       execution:
         onExecute:
-          - write_output recommendations_propertybag imageTag=$res_recommendationsvc_build_info_buildNumber commitSha=$res_recommendationsvc_repo_commitSha commiterLogin=$res_recommendationsvc_repo_committerLogin
+          - write_output recommendations_propertybag imageTag=${run_number} commitSha=$res_recommendationsvc_repo_commitSha commiterLogin=$res_recommendationsvc_repo_committerLogin
     - name: build_recommendationsvc
       type: DockerBuild
       configuration:
@@ -468,7 +468,7 @@ pipelines:
           - name: shipping_propertybag
       execution:
         onExecute:
-          - write_output shipping_propertybag imageTag=$res_shippingsvc_build_info_buildNumber commitSha=$res_shippingsvc_repo_commitSha commiterLogin=$res_shippingsvc_repo_committerLogin
+          - write_output shipping_propertybag imageTag=${run_number} commitSha=$res_shippingsvc_repo_commitSha commiterLogin=$res_shippingsvc_repo_committerLogin
     - name: build_shippingsvc
       type: DockerBuild
       configuration:
@@ -518,7 +518,7 @@ pipelines:
           - name: load_propertybag
       execution:
         onExecute:
-          - write_output load_propertybag imageTag=$res_loadgenerator_build_info_buildNumber commitSha=$res_loadgensvc_repo_commitSha commiterLogin=$res_loadgensvc_repo_committerLogin
+          - write_output load_propertybag imageTag=${run_number} commitSha=$res_loadgensvc_repo_commitSha commiterLogin=$res_loadgensvc_repo_committerLogin
     - name: build_loadgen
       type: DockerBuild
       configuration:
