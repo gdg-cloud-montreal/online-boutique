@@ -307,7 +307,7 @@ pipelines:
       type: Bash
       configuration:
         inputSteps:
-          - name: publish_productcatalogsvc_build
+          - name: push_productcatalogsvc
         inputResources:
           - name: productcatalogsvc_repo
         outputResources:
@@ -334,6 +334,9 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         targetRepository: boutique
+        forceXrayScan:  true             # default false
+        failOnScan:  false         # default true
+        autoPublishBuildInfo: true 
         integrations:
           - name: artifactory
         inputSteps:
@@ -374,6 +377,9 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         targetRepository: boutique
+        forceXrayScan:  true             # default false
+        failOnScan:  false         # default true
+        autoPublishBuildInfo: true 
         integrations:
           - name: artifactory
         inputSteps:
@@ -414,6 +420,9 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         targetRepository: boutique
+        forceXrayScan:  true             # default false
+        failOnScan:  false         # default true
+        autoPublishBuildInfo: true 
         integrations:
           - name: artifactory
         inputSteps:
@@ -454,6 +463,9 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         targetRepository: boutique
+        forceXrayScan:  true             # default false
+        failOnScan:  false         # default true
+        autoPublishBuildInfo: true 
         integrations:
           - name: artifactory
         inputSteps:
