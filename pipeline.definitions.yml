@@ -6,7 +6,7 @@ pipelines:
       type: Bash
       configuration:
         inputSteps:
-          - name: xray_scan_adsvc
+          - name: push_adsvc
         inputResources:
           - name: adsvc_repo
         outputResources:
@@ -33,22 +33,15 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         targetRepository: boutique
+        forceXrayScan:  true             # default false
+        failOnScan:  false         # default true
+        autoPublishBuildInfo: true       # default false
         integrations:
           - name: artifactory
         inputSteps:
           - name: build_adsvc
         outputResources:
           - name: adsvc_build_info
-    - name: xray_scan_adsvc
-      type: XrayScan
-      configuration:
-        affinityGroup: fmkGroup
-        failOnScan: false
-        inputSteps:
-          - name: build_adsvc
-        inputResources:
-          - name: adsvc_build_info
-            trigger: false
    
   - name: build_boutique_cartsvc
     steps:
@@ -56,7 +49,7 @@ pipelines:
       type: Bash
       configuration:
         inputSteps:
-          - name: xray_scan_cartsvc
+          - name: push_cartsvc
         inputResources:
           - name: cartsvc_repo
         outputResources:
@@ -83,30 +76,23 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         targetRepository: boutique
+        forceXrayScan:  true             # default false
+        failOnScan:  false         # default true
+        autoPublishBuildInfo: true 
         integrations:
           - name: artifactory
         inputSteps:
           - name: build_cartsvc
         outputResources:
           - name: cartsvc_build_info
-    - name: xray_scan_cartsvc
-      type: XrayScan
-      configuration:
-        affinityGroup: fmkGroup
-        failOnScan: false
-        inputSteps:
-          - name: build_cartsvc
-        inputResources:
-          - name: cartsvc_build_info
-            trigger: false
-
+  
   - name: build_boutique_checkoutsvc
     steps:
     - name: extra_buildInfo
       type: Bash
       configuration:
         inputSteps:
-          - name: xray_scan_checkoutsvc
+          - name: push_checkoutsvc
         inputResources:
           - name: checkoutsvc_repo
         outputResources:
@@ -133,22 +119,15 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         targetRepository: boutique
+        forceXrayScan:  true             # default false
+        failOnScan:  false         # default true
+        autoPublishBuildInfo: true 
         integrations:
           - name: artifactory
         inputSteps:
           - name: build_checkoutsvc
         outputResources:
           - name: checkoutsvc_build_info
-    - name: xray_scan_checkoutsvc
-      type: XrayScan
-      configuration:
-        affinityGroup: fmkGroup
-        failOnScan: false
-        inputSteps:
-          - name: build_checkoutsvc
-        inputResources:
-          - name: checkoutsvc_build_info
-            trigger: false
 
   - name: build_boutique_currencysvc
     steps:
@@ -156,7 +135,7 @@ pipelines:
       type: Bash
       configuration:
         inputSteps:
-          - name: xray_scan_currencysvc
+          - name: push_currencysvc
         inputResources:
           - name: currencysvc_repo
         outputResources:
@@ -183,20 +162,14 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         targetRepository: boutique
+        forceXrayScan:  true             # default false
+        failOnScan:  false         # default true
+        autoPublishBuildInfo: true 
         integrations:
           - name: artifactory
         inputSteps:
           - name: build_currencysvc
         outputResources:
-          - name: currencysvc_build_info
-    - name: xray_scan_currencysvc
-      type: XrayScan
-      configuration:
-        affinityGroup: fmkGroup
-        failOnScan: false
-        inputSteps:
-          - name: build_currencysvc
-        inputResources:
           - name: currencysvc_build_info
 
   - name: build_boutique_emailsvc
@@ -205,7 +178,7 @@ pipelines:
       type: Bash
       configuration:
         inputSteps:
-          - name: xray_scan_emailsvc
+          - name: push_emailsvc
         inputResources:
           - name: emailsvc_repo
         outputResources:
@@ -232,20 +205,14 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         targetRepository: boutique
+        forceXrayScan:  true             # default false
+        failOnScan:  false         # default true
+        autoPublishBuildInfo: true 
         integrations:
           - name: artifactory
         inputSteps:
           - name: build_emailsvc
         outputResources:
-          - name: emailsvc_build_info
-    - name: xray_scan_emailsvc
-      type: XrayScan
-      configuration:
-        affinityGroup: fmkGroup
-        failOnScan: false
-        inputSteps:
-          - name: build_emailsvc
-        inputResources:
           - name: emailsvc_build_info
 
   - name: build_boutique_frontend
@@ -254,7 +221,7 @@ pipelines:
       type: Bash
       configuration:
         inputSteps:
-          - name: xray_scan_frontend
+          - name: push_frontend
         inputResources:
           - name: frontendsvc_repo
         outputResources:
@@ -281,22 +248,15 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         targetRepository: boutique
+        forceXrayScan:  true             # default false
+        failOnScan:  false         # default true
+        autoPublishBuildInfo: true 
         integrations:
           - name: artifactory
         inputSteps:
           - name: build_frontend
         outputResources:
           - name: frontend_build_info
-    - name: xray_scan_frontend
-      type: XrayScan
-      configuration:
-        affinityGroup: fmkGroup
-        failOnScan: false
-        inputSteps:
-          - name: build_frontend
-        inputResources:
-          - name: frontend_build_info
-            trigger: false  
 
   - name: build_boutique_paymentsvc
     steps:
@@ -304,7 +264,7 @@ pipelines:
       type: Bash
       configuration:
         inputSteps:
-          - name: xray_scan_paymentsvc
+          - name: push_paymentsvc
         inputResources:
           - name: paymentsvc_repo
         outputResources:
@@ -331,22 +291,15 @@ pipelines:
       configuration:
         affinityGroup: fmkGroup
         targetRepository: boutique
+        forceXrayScan:  true             # default false
+        failOnScan:  false         # default true
+        autoPublishBuildInfo: true 
         integrations:
           - name: artifactory
         inputSteps:
           - name: build_paymentsvc
         outputResources:
           - name: paymentsvc_build_info
-    - name: xray_scan_paymentsvc
-      type: XrayScan
-      configuration:
-        affinityGroup: fmkGroup
-        failOnScan: false
-        inputSteps:
-          - name: build_paymentsvc
-        inputResources:
-          - name: paymentsvc_build_info
-            trigger: false
 
   - name: build_boutique_productcatalogsvc
     steps:
@@ -387,31 +340,14 @@ pipelines:
           - name: build_productcatalogsvc
         outputResources:
           - name: productcatalogsvc_build_info
-    - name: xray_scan_productcatalogsvc
-      type: XrayScan
-      configuration:
-        affinityGroup: fmkGroup
-        failOnScan: false
-        inputSteps:
-          - name: build_productcatalogsvc
-        inputResources:
-          - name: productcatalogsvc_build_info
-            trigger: false
-    - name: publish_productcatalogsvc_build
-      type: PublishBuildInfo
-      configuration:
-        affinityGroup: fmkGroup
-        inputSteps:
-          - name: push_productcatalogsvc
-        outputResources:
-          - name: productcatalogsvc_build_info
+
   - name: build_boutique_recommendationsvc
     steps:
     - name: extra_buildInfo
       type: Bash
       configuration:
         inputSteps:
-          - name: xray_scan_recommendationsvc
+          - name: push_recommendationsvc
         inputResources:
           - name: recommendationsvc_repo
         outputResources:
@@ -444,16 +380,6 @@ pipelines:
           - name: build_recommendationsvc
         outputResources:
           - name: recommendationsvc_build_info
-    - name: xray_scan_recommendationsvc
-      type: XrayScan
-      configuration:
-        affinityGroup: fmkGroup
-        failOnScan: false
-        inputSteps:
-          - name: build_recommendationsvc
-        inputResources:
-          - name: recommendationsvc_build_info
-            trigger: false
 
   - name: build_boutique_shippingsvc
     steps:
@@ -461,7 +387,7 @@ pipelines:
       type: Bash
       configuration:
         inputSteps:
-          - name: xray_scan_shippingsvc
+          - name: push_shippingsvc
         inputResources:
           - name: shippingsvc_repo
         outputResources:
@@ -494,16 +420,6 @@ pipelines:
           - name: build_shippingsvc
         outputResources:
           - name: shippingsvc_build_info
-    - name: xray_scan_shippingsvc
-      type: XrayScan
-      configuration:
-        affinityGroup: fmkGroup
-        failOnScan: false
-        inputSteps:
-          - name: build_shippingsvc
-        inputResources:
-          - name: shippingsvc_build_info
-            trigger: false
 
   - name: build_boutique_loadgen
     steps:
@@ -511,7 +427,7 @@ pipelines:
       type: Bash
       configuration:
         inputSteps:
-          - name: xray_scan_loadgen
+          - name: push_loadgen
         inputResources:
           - name: loadgensvc_repo
         outputResources:
@@ -544,14 +460,5 @@ pipelines:
           - name: build_loadgen
         outputResources:
           - name: loadgenerator_build_info
-    - name: xray_scan_loadgen
-      type: XrayScan
-      configuration:
-        affinityGroup: fmkGroup
-        failOnScan: false
-        inputSteps:
-          - name: build_loadgen
-        inputResources:
-          - name: loadgenerator_build_info
-            trigger: false
+
 
