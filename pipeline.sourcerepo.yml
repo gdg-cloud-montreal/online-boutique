@@ -7,9 +7,9 @@ resources:
       path: gdg-cloud-montreal/online-boutique
       buildOn:
         commit:                true
-        pullRequestCreate:     true
+        pullRequestClose:     true
       files:
-        include: adservice/*
+        include: ^adservice/*
   - name: cartsvc_repo
     type: GitRepo
     configuration:
@@ -17,9 +17,9 @@ resources:
       path: gdg-cloud-montreal/online-boutique
       buildOn:
         commit:                true
-        pullRequestCreate:     true
+        pullRequestClose:     true
       files:
-        include: cartservice/*
+        include: ^cartservice/*
   - name: checkoutsvc_repo
     type: GitRepo
     configuration:
@@ -27,9 +27,9 @@ resources:
       path: gdg-cloud-montreal/online-boutique
       buildOn:
         commit:                true
-        pullRequestCreate:     true
+        pullRequestClose:     true
       files:
-        include: checkoutservice/*
+        include: ^checkoutservice/*
   - name: currencysvc_repo
     type: GitRepo
     configuration:
@@ -37,9 +37,9 @@ resources:
       path: gdg-cloud-montreal/online-boutique
       buildOn:
         commit:                true
-        pullRequestCreate:     true
+        pullRequestClose:     true
       files:
-        include: currencyservice/*
+        include: ^currencyservice/*
   - name: emailsvc_repo
     type: GitRepo
     configuration:
@@ -47,9 +47,9 @@ resources:
       path: gdg-cloud-montreal/online-boutique
       buildOn:
         commit:                true
-        pullRequestCreate:     true
+        pullRequestClose:     true
       files:
-        include: emailservice/*
+        include: ^emailservice/*
   - name: frontendsvc_repo
     type: GitRepo
     configuration:
@@ -57,9 +57,9 @@ resources:
       path: gdg-cloud-montreal/online-boutique
       buildOn:
         commit:                true
-        pullRequestCreate:     true
+        pullRequestClose:     true
       files:
-        include: frontend/*
+        include: ^frontend/*
   - name: paymentsvc_repo
     type: GitRepo
     configuration:
@@ -67,9 +67,9 @@ resources:
       path: gdg-cloud-montreal/online-boutique
       buildOn:
         commit:                true
-        pullRequestCreate:     true
+        pullRequestClose:     true
       files:
-        include: paymentservice/*
+        include: ^paymentservice/*
   - name: productcatalogsvc_repo
     type: GitRepo
     configuration:
@@ -77,9 +77,9 @@ resources:
       path: gdg-cloud-montreal/online-boutique
       buildOn:
         commit:                true
-        pullRequestCreate:     true
+        pullRequestClose:     true
       files:
-        include: productcatalogservice/*
+        include: ^productcatalogservice/*
   - name: recommendationsvc_repo
     type: GitRepo
     configuration:
@@ -87,9 +87,9 @@ resources:
       path: gdg-cloud-montreal/online-boutique
       buildOn:
         commit:                true
-        pullRequestCreate:     true
+        pullRequestClose:     true
       files:
-        include: recommendationservice/*
+        include: ^recommendationservice/*
   - name: shippingsvc_repo
     type: GitRepo
     configuration:
@@ -97,9 +97,9 @@ resources:
       path: gdg-cloud-montreal/online-boutique
       buildOn:
         commit:                true
-        pullRequestCreate:     true
+        pullRequestClose:     true
       files:
-        include: shippingservice/*
+        include: ^shippingservice/*
   - name: loadgensvc_repo
     type: GitRepo
     configuration:
@@ -107,6 +107,6 @@ resources:
       path: gdg-cloud-montreal/online-boutique
       buildOn:
         commit:                true
-        pullRequestCreate:     true
+        pullRequestClose:     true
       files:
-        include: loadgenerator/*
+        include: ^loadgenerator/*
