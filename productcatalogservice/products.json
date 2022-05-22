@@ -2,9 +2,9 @@
     "products": [
         {
             "id": "OLJCESPC7Z",
-            "name": "Sunglasses",
-            "description": "Add a modern touch to your outfits with these sleek aviator sunglasses.",
-            "picture": "/static/img/products/sunglasses.jpg",
+            "name": "Saddle",
+            "description": "Add a modern touch to your Frog bike with Sport saddle with cool yellow frog splat logo.",
+            "picture": "/static/img/products/frog-saddle.jpg",
             "priceUsd": {
                 "currencyCode": "USD",
                 "units": 19,
