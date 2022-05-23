@@ -2,7 +2,7 @@
     "products": [
         {
             "id": "OLJCESPC7Z",
-            "name": "Saddle",
+            "name": "Frog Saddle",
             "description": "Add a modern touch to your Frog bike with Sport saddle with cool yellow frog splat logo.",
             "picture": "/static/img/products/frog-saddle.jpg",
             "priceUsd": {
@@ -10,103 +10,103 @@
                 "units": 19,
                 "nanos": 990000000
             },
-            "categories": ["accessories"]
+            "categories": ["components"]
         },
         {
             "id": "66VCHSJNUP",
-            "name": "Tank Top",
-            "description": "Perfectly cropped cotton tank, with a scooped neckline.",
-            "picture": "/static/img/products/tank-top.jpg",
+            "name": "Frog Crank Set",
+            "description": "Replacement crank sets for Frog Bikes. Crank set includes chain ring with integrated drive side crank arm and the non-drive side crank arm.",
+            "picture": "/static/img/products/frog_crankset.jpg",
             "priceUsd": {
                 "currencyCode": "USD",
-                "units": 18,
+                "units": 34,
                 "nanos": 990000000
             },
-            "categories": ["clothing", "tops"]
+            "categories": ["components"]
         },
         {
             "id": "1YMWWN1N4O",
-            "name": "Watch",
-            "description": "This gold-tone stainless steel watch will work with most of your outfits.",
-            "picture": "/static/img/products/watch.jpg",
+            "name": "Frog Helmet",
+            "description": "This green Frog Helmet looks perfect to complete your bike gear",
+            "picture": "/static/img/products/frog_helmet.jpg",
             "priceUsd": {
                 "currencyCode": "USD",
-                "units": 109,
+                "units": 79,
+                "nanos": 990000000
+            },
+            "categories": ["accessories", "gear"]
+        },
+        {
+            "id": "L9ECAV7KIM",
+            "name": "Frog Shoes",
+            "description": "This shoe one of the most popular shoe choices in the professionnal peloton. No wonder - it serves it's purpose perfectly and is extremely comfortable.",
+            "picture": "/static/img/products/frog_shoes.jpg",
+            "priceUsd": {
+                "currencyCode": "USD",
+                "units": 499,
+                "nanos": 990000000
+            },
+            "categories": ["accessories", "footwear", "gear"]
+        },
+        {
+            "id": "2ZYFJ3GM2N",
+            "name": "Frog Water Bottle",
+            "description": "A 16 oz BPA free water bottle with the famous bright green splat logo on one side, and non-slip finger grips on the other.  It has a non-drip one-way valve so it can easily be used with one hand.",
+            "picture": "/static/img/products/frog_water_bottle.jpg",
+            "priceUsd": {
+                "currencyCode": "USD",
+                "units": 7,
                 "nanos": 990000000
             },
             "categories": ["accessories"]
         },
         {
-            "id": "L9ECAV7KIM",
-            "name": "Loafers",
-            "description": "A neat addition to your summer wardrobe.",
-            "picture": "/static/img/products/loafers.jpg",
-            "priceUsd": {
-                "currencyCode": "USD",
-                "units": 89,
-                "nanos": 990000000
-            },
-            "categories": ["footwear"]
-        },
-        {
-            "id": "2ZYFJ3GM2N",
-            "name": "Hairdryer",
-            "description": "This lightweight hairdryer has 3 heat and speed settings. It's perfect for travel.",
-            "picture": "/static/img/products/hairdryer.jpg",
-            "priceUsd": {
-                "currencyCode": "USD",
-                "units": 24,
-                "nanos": 990000000
-            },
-            "categories": ["hair", "beauty"]
-        },
-        {
             "id": "0PUK6V6EV0",
-            "name": "Candle Holder",
-            "description": "This small but intricate candle holder is an excellent gift.",
-            "picture": "/static/img/products/candle-holder.jpg",
+            "name": "Frog Pedals",
+            "description": "The Frog Composite BMX Pedals features a huge (115x105 mm) super grippy platform with 10 rear-loading steel pins per side to keep your feet planted on even the roughest of trails.",
+            "picture": "/static/img/products/frog-pedals-green.jpg",
             "priceUsd": {
                 "currencyCode": "USD",
-                "units": 18,
+                "units": 70,
                 "nanos": 990000000
             },
-            "categories": ["decor", "home"]
-        },
+            "categories": ["components"]
+        }, 
         {
             "id": "LS4PSXUNUM",
-            "name": "Salt & Pepper Shakers",
-            "description": "Add some flavor to your kitchen.",
-            "picture": "/static/img/products/salt-and-pepper-shakers.jpg",
+            "name": "Frog Chain",
+            "description": "Teflon coated single speed BMX chain for Frog Bike. It comes with a pre-installed master link and half link in order to fit as well.",
+            "picture": "/static/img/products/frog-chain.jpg",
             "priceUsd": {
                 "currencyCode": "USD",
-                "units": 18,
+                "units": 14,
                 "nanos": 490000000
             },
-            "categories": ["kitchen"]
+            "categories": ["components"]
         },
         {
             "id": "9SIQT8TOJO",
-            "name": "Bamboo Glass Jar",
-            "description": "This bamboo glass jar can hold 57 oz (1.7 l) and is perfect for any kitchen.",
-            "picture": "/static/img/products/bamboo-glass-jar.jpg",
+            "name": "Frog MTB",
+            "description": "This Hybrid Bike is the ideal multi-purpose bike.",
+            "picture": "/static/img/products/frog_mountain_bike.jpg",
             "priceUsd": {
                 "currencyCode": "USD",
-                "units": 5,
+                "units": 895,
                 "nanos": 490000000
             },
-            "categories": ["kitchen"]
+            "categories": ["bike", "mtb"]
         },
         {
             "id": "6E92ZMYYFZ",
-            "name": "Mug",
-            "description": "A simple mug with a mustard interior.",
-            "picture": "/static/img/products/mug.jpg",
+            "name": "Frog Hybrid",
+            "description": "This mountain bike is the ideal multi terrain bicycle for off-road cycling.",
+            "picture": "/static/img/products/frog_hybrid_bike.jpg",
             "priceUsd": {
                 "currencyCode": "USD",
-                "units": 8,
+                "units": 1300,
                 "nanos": 990000000
             },
-            "categories": ["kitchen"]
+            "categories": ["bike", "hybrid"]
         }
     ]
 }
