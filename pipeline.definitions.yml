@@ -20,7 +20,7 @@ pipelines:
         affinityGroup: fmkGroup
         dockerFileLocation: adservice
         dockerFileName: Dockerfile
-        dockerImageName: ${int_server_name_value}.jfrog.io/boutiquecd-images/ adservice
+        dockerImageName: ${int_server_name_value}.jfrog.io/boutiquecd-images/adservice
         dockerImageTag: ${run_number}
         dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
         integrations:        
