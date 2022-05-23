@@ -62,51 +62,51 @@
         },
         {
             "id": "0PUK6V6EV0",
-            "name": "Candle Holder",
-            "description": "This small but intricate candle holder is an excellent gift.",
-            "picture": "/static/img/products/candle-holder.jpg",
+            "name": "Frog Pedals",
+            "description": "The Frog Composite BMX Pedals features a huge (115x105 mm) super grippy platform with 10 rear-loading steel pins per side to keep your feet planted on even the roughest of trails.",
+            "picture": "/static/img/products/frog-pedals-green.jpg",
             "priceUsd": {
                 "currencyCode": "USD",
-                "units": 18,
+                "units": 70,
                 "nanos": 990000000
             },
-            "categories": ["decor", "home"]
-        },
+            "categories": ["components"]
+        }, 
         {
             "id": "LS4PSXUNUM",
-            "name": "Salt & Pepper Shakers",
-            "description": "Add some flavor to your kitchen.",
-            "picture": "/static/img/products/salt-and-pepper-shakers.jpg",
+            "name": "Frog Chain",
+            "description": "Teflon coated single speed BMX chain for Frog Bike. It comes with a pre-installed master link and half link in order to fit as well.",
+            "picture": "/static/img/products/frog-pedals-green.jpg",
             "priceUsd": {
                 "currencyCode": "USD",
-                "units": 18,
+                "units": 14,
                 "nanos": 490000000
             },
-            "categories": ["kitchen"]
+            "categories": ["components"]
         },
         {
             "id": "9SIQT8TOJO",
-            "name": "Bamboo Glass Jar",
-            "description": "This bamboo glass jar can hold 57 oz (1.7 l) and is perfect for any kitchen.",
-            "picture": "/static/img/products/bamboo-glass-jar.jpg",
+            "name": "Frog MTB",
+            "description": "This Hybrid Bike is the ideal multi-purpose bike.",
+            "picture": "/static/img/products/frog_mountain_bike.jpg",
             "priceUsd": {
                 "currencyCode": "USD",
-                "units": 5,
+                "units": 895,
                 "nanos": 490000000
             },
-            "categories": ["kitchen"]
+            "categories": ["bike", "mtb"]
         },
         {
             "id": "6E92ZMYYFZ",
-            "name": "Mug",
-            "description": "A simple mug with a mustard interior.",
-            "picture": "/static/img/products/mug.jpg",
+            "name": "Frog Hybrid",
+            "description": "This mountain bike is the ideal multi terrain bicycle for off-road cycling.",
+            "picture": "/static/img/products/frog_hybrid_bike.jpg",
             "priceUsd": {
                 "currencyCode": "USD",
-                "units": 8,
+                "units": 1300,
                 "nanos": 990000000
             },
-            "categories": ["kitchen"]
+            "categories": ["bike", "hybrid"]
         }
     ]
 }
