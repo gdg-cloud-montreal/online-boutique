@@ -38,15 +38,15 @@
         },
         {
             "id": "L9ECAV7KIM",
-            "name": "Loafers",
-            "description": "A neat addition to your summer wardrobe.",
-            "picture": "/static/img/products/loafers.jpg",
+            "name": "Frog Shoes",
+            "description": "This shoe one of the most popular shoe choices in the professionnal peloton. No wonder - it serves it's purpose perfectly and is extremely comfortable.",
+            "picture": "/static/img/products/frog_shoes.jpg",
             "priceUsd": {
                 "currencyCode": "USD",
-                "units": 89,
+                "units": 499,
                 "nanos": 990000000
             },
-            "categories": ["footwear"]
+            "categories": ["accessories,footwear,gear"]
         },
         {
             "id": "2ZYFJ3GM2N",
