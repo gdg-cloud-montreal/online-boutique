@@ -271,7 +271,7 @@ pipelines:
           - name: payment_propertybag
       execution:
         onExecute:
-          - write_output payment_propertybag imageTag=${run_number} commitSha=$res_paymentsvc_repoo_commitSha commiterLogin=$res_paymentsvc_repo_committerLogin
+          - write_output payment_propertybag imageTag=${run_number} commitSha=$res_paymentsvc_repo_commitSha commiterLogin=$res_paymentsvc_repo_committerLogin
     - name: build_paymentsvc
       type: DockerBuild
       configuration:
