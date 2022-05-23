@@ -26,15 +26,15 @@
         },
         {
             "id": "1YMWWN1N4O",
-            "name": "Watch",
-            "description": "This gold-tone stainless steel watch will work with most of your outfits.",
-            "picture": "/static/img/products/watch.jpg",
+            "name": "Frog Helmet",
+            "description": "This green Frog Helmet looks perfect to complete your bike gear",
+            "picture": "/static/img/products/frog_helmet.jpg",
             "priceUsd": {
                 "currencyCode": "USD",
-                "units": 109,
+                "units": 79,
                 "nanos": 990000000
             },
-            "categories": ["accessories"]
+            "categories": ["accessories, gear"]
         },
         {
             "id": "L9ECAV7KIM",
