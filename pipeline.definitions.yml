@@ -20,7 +20,7 @@ pipelines:
         affinityGroup: fmkGroup
         dockerFileLocation: adservice
         dockerFileName: Dockerfile
-        dockerImageName: ${int_server_name_value}.jfrog.io/boutiqueci-boutique/adservice
+        dockerImageName: ${int_server_name_value}.jfrog.io/boutiquecd-images/ adservice
         dockerImageTag: ${run_number}
         dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
         integrations:        
@@ -63,7 +63,7 @@ pipelines:
         affinityGroup: fmkGroup
         dockerFileLocation: cartservice/src
         dockerFileName: Dockerfile
-        dockerImageName: ${int_server_name_value}.jfrog.io/boutiqueci-boutique/cartservice
+        dockerImageName: ${int_server_name_value}.jfrog.io/boutiquecd-images/cartservice
         dockerImageTag: ${run_number}
         dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
         integrations:        
@@ -106,7 +106,7 @@ pipelines:
         affinityGroup: fmkGroup
         dockerFileLocation: checkoutservice
         dockerFileName: Dockerfile
-        dockerImageName: ${int_server_name_value}.jfrog.io/boutiqueci-boutique/checkoutservice
+        dockerImageName: ${int_server_name_value}.jfrog.io/boutiquecd-images/checkoutservice
         dockerImageTag: ${run_number}
         dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
         integrations:        
@@ -149,7 +149,7 @@ pipelines:
         affinityGroup: fmkGroup
         dockerFileLocation: currencyservice
         dockerFileName: Dockerfile
-        dockerImageName: ${int_server_name_value}.jfrog.io/boutiqueci-boutique/currencyservice
+        dockerImageName: ${int_server_name_value}.jfrog.io/boutiquecd-images/currencyservice
         dockerImageTag: ${run_number}
         dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
         integrations:        
@@ -192,7 +192,7 @@ pipelines:
         affinityGroup: fmkGroup
         dockerFileLocation: emailservice
         dockerFileName: Dockerfile
-        dockerImageName: ${int_server_name_value}.jfrog.io/boutiqueci-boutique/emailservice
+        dockerImageName: ${int_server_name_value}.jfrog.io/boutiquecd-images/emailservice
         dockerImageTag: ${run_number}
         dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
         integrations:        
@@ -235,7 +235,7 @@ pipelines:
         affinityGroup: fmkGroup
         dockerFileLocation: frontend
         dockerFileName: Dockerfile
-        dockerImageName: ${int_server_name_value}.jfrog.io/boutiqueci-boutique/frontend
+        dockerImageName: ${int_server_name_value}.jfrog.io/boutiquecd-images/frontend
         dockerImageTag: ${run_number}
         dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
         integrations:        
@@ -278,7 +278,7 @@ pipelines:
         affinityGroup: fmkGroup
         dockerFileLocation: paymentservice
         dockerFileName: Dockerfile
-        dockerImageName: ${int_server_name_value}.jfrog.io/boutiqueci-boutique/paymentservice
+        dockerImageName: ${int_server_name_value}.jfrog.io/boutiquecd-images/paymentservice
         dockerImageTag: ${run_number}
         dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
         integrations:        
@@ -321,7 +321,7 @@ pipelines:
         affinityGroup: fmkGroup
         dockerFileLocation: productcatalogservice
         dockerFileName: Dockerfile
-        dockerImageName: ${int_server_name_value}.jfrog.io/boutiqueci-boutique/productcatalogservice
+        dockerImageName: ${int_server_name_value}.jfrog.io/boutiquecd-images/productcatalogservice
         dockerImageTag: ${run_number}
         dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
         integrations:        
@@ -364,7 +364,7 @@ pipelines:
         affinityGroup: fmkGroup
         dockerFileLocation: recommendationservice
         dockerFileName: Dockerfile
-        dockerImageName: ${int_server_name_value}.jfrog.io/boutiqueci-boutique/recommendationservice
+        dockerImageName: ${int_server_name_value}.jfrog.io/boutiquecd-images/recommendationservice
         dockerImageTag: ${run_number}
         dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
         integrations:        
@@ -407,7 +407,7 @@ pipelines:
         affinityGroup: fmkGroup
         dockerFileLocation: shippingservice
         dockerFileName: Dockerfile
-        dockerImageName: ${int_server_name_value}.jfrog.io/boutiqueci-boutique/shippingservice
+        dockerImageName: ${int_server_name_value}.jfrog.io/boutiquecd-images/shippingservice
         dockerImageTag: ${run_number}
         dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
         integrations:        
@@ -450,7 +450,7 @@ pipelines:
         affinityGroup: fmkGroup
         dockerFileLocation: loadgenerator
         dockerFileName: Dockerfile
-        dockerImageName: ${int_server_name_value}.jfrog.io/boutiqueci-boutique/loadgenerator
+        dockerImageName: ${int_server_name_value}.jfrog.io/boutiquecd-images/loadgenerator
         dockerImageTag: ${run_number}
         dockerOptions: --build-arg SERVER_NAME=${int_server_name_value}
         integrations:        
