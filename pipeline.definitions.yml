@@ -32,7 +32,7 @@ pipelines:
       type: DockerPush
       configuration:
         affinityGroup: fmkGroup
-        targetRepository: boutique
+        targetRepository: boutiquecd-images        
         forceXrayScan:  true             # default false
         failOnScan:  false         # default true
         autoPublishBuildInfo: true       # default false
@@ -75,7 +75,7 @@ pipelines:
       type: DockerPush
       configuration:
         affinityGroup: fmkGroup
-        targetRepository: boutique
+        targetRepository: boutiquecd-images        
         forceXrayScan:  true             # default false
         failOnScan:  false         # default true
         autoPublishBuildInfo: true 
@@ -118,7 +118,7 @@ pipelines:
       type: DockerPush
       configuration:
         affinityGroup: fmkGroup
-        targetRepository: boutique
+        targetRepository: boutiquecd-images        
         forceXrayScan:  true             # default false
         failOnScan:  false         # default true
         autoPublishBuildInfo: true 
@@ -161,7 +161,7 @@ pipelines:
       type: DockerPush
       configuration:
         affinityGroup: fmkGroup
-        targetRepository: boutique
+        targetRepository: boutiquecd-images        
         forceXrayScan:  true             # default false
         failOnScan:  false         # default true
         autoPublishBuildInfo: true 
@@ -204,7 +204,7 @@ pipelines:
       type: DockerPush
       configuration:
         affinityGroup: fmkGroup
-        targetRepository: boutique
+        targetRepository: boutiquecd-images        
         forceXrayScan:  true             # default false
         failOnScan:  false         # default true
         autoPublishBuildInfo: true 
@@ -247,7 +247,7 @@ pipelines:
       type: DockerPush
       configuration:
         affinityGroup: fmkGroup
-        targetRepository: boutique
+        targetRepository: boutiquecd-images        
         forceXrayScan:  true             # default false
         failOnScan:  false         # default true
         autoPublishBuildInfo: true 
@@ -290,7 +290,7 @@ pipelines:
       type: DockerPush
       configuration:
         affinityGroup: fmkGroup
-        targetRepository: boutique
+        targetRepository: boutiquecd-images        
         forceXrayScan:  true             # default false
         failOnScan:  false         # default true
         autoPublishBuildInfo: true 
@@ -333,7 +333,7 @@ pipelines:
       type: DockerPush
       configuration:
         affinityGroup: fmkGroup
-        targetRepository: boutique
+        targetRepository: boutiquecd-images       
         forceXrayScan:  true             # default false
         failOnScan:  false         # default true
         autoPublishBuildInfo: true 
@@ -376,7 +376,7 @@ pipelines:
       type: DockerPush
       configuration:
         affinityGroup: fmkGroup
-        targetRepository: boutique
+        targetRepository: boutiquecd-images        
         forceXrayScan:  true             # default false
         failOnScan:  false         # default true
         autoPublishBuildInfo: true 
@@ -419,7 +419,7 @@ pipelines:
       type: DockerPush
       configuration:
         affinityGroup: fmkGroup
-        targetRepository: boutique
+        targetRepository: boutiquecd-images        
         forceXrayScan:  true             # default false
         failOnScan:  false         # default true
         autoPublishBuildInfo: true 
@@ -462,7 +462,7 @@ pipelines:
       type: DockerPush
       configuration:
         affinityGroup: fmkGroup
-        targetRepository: boutique
+        targetRepository: boutiquecd-images
         forceXrayScan:  true             # default false
         failOnScan:  false         # default true
         autoPublishBuildInfo: true 
