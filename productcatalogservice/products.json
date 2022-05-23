@@ -34,7 +34,7 @@
                 "units": 79,
                 "nanos": 990000000
             },
-            "categories": ["accessories, gear"]
+            "categories": ["accessories", "gear"]
         },
         {
             "id": "L9ECAV7KIM",
@@ -46,19 +46,19 @@
                 "units": 499,
                 "nanos": 990000000
             },
-            "categories": ["accessories,footwear,gear"]
+            "categories": ["accessories", "footwear", "gear"]
         },
         {
             "id": "2ZYFJ3GM2N",
-            "name": "Hairdryer",
-            "description": "This lightweight hairdryer has 3 heat and speed settings. It's perfect for travel.",
-            "picture": "/static/img/products/hairdryer.jpg",
+            "name": "Frog Water Bottle",
+            "description": "A 16oz BPA free water bottle with the famous bright green "splat" logo on one side, and non-slip finger grips on the other.  It has a non-drip one-way valve so it can easily be used with one hand.",
+            "picture": "/static/img/products/frog_water_bottle.jpg",
             "priceUsd": {
                 "currencyCode": "USD",
-                "units": 24,
+                "units": 7,
                 "nanos": 990000000
             },
-            "categories": ["hair", "beauty"]
+            "categories": ["accessories"]
         },
         {
             "id": "0PUK6V6EV0",
