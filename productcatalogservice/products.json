@@ -2,7 +2,7 @@
     "products": [
         {
             "id": "OLJCESPC7Z",
-            "name": "Saddle",
+            "name": "Frog Saddle",
             "description": "Add a modern touch to your Frog bike with Sport saddle with cool yellow frog splat logo.",
             "picture": "/static/img/products/frog-saddle.jpg",
             "priceUsd": {
@@ -10,19 +10,19 @@
                 "units": 19,
                 "nanos": 990000000
             },
-            "categories": ["accessories"]
+            "categories": ["components"]
         },
         {
             "id": "66VCHSJNUP",
-            "name": "Tank Top",
-            "description": "Perfectly cropped cotton tank, with a scooped neckline.",
-            "picture": "/static/img/products/tank-top.jpg",
+            "name": "Frog Crank Set",
+            "description": "Replacement crank sets for Frog Bikes.  Crank set includes chain ring with integrated drive side crank arm and the non-drive side crank arm.",
+            "picture": "/static/img/products/frog_crankset.jpg",
             "priceUsd": {
                 "currencyCode": "USD",
-                "units": 18,
+                "units": 34,
                 "nanos": 990000000
             },
-            "categories": ["clothing", "tops"]
+            "categories": ["components"]
         },
         {
             "id": "1YMWWN1N4O",
