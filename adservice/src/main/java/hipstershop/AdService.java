@@ -184,12 +184,12 @@ public final class AdService {
     Ad candleHolder =
         Ad.newBuilder()
             .setRedirectUrl("/product/0PUK6V6EV0")
-            .setText("Candle holder for sale. 30% off.")
+            .setText("Frog Pedals for sale. 30% off.")
             .build();
     Ad bambooGlassJar =
         Ad.newBuilder()
             .setRedirectUrl("/product/9SIQT8TOJO")
-            .setText("Pedals glass jar for sale. 10% off.")
+            .setText("Frog MTB bikes for sale. 10% off.")
             .build();
     Ad watch =
         Ad.newBuilder()
