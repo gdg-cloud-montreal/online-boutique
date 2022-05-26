@@ -112,7 +112,7 @@
             "id": "6E92ZMYYFZ",
             "name": "Frog Rental",
             "description": "This rental mountain bike is the ideal multi terrain bicycle for off-road cycling.",
-            "picture": "/static/img/products/frog_hybrid_bike.jpg",
+            "picture": "/static/img/products/frog_hybrid_rental_bike.jpg",
             "priceUsd": {
                 "currencyCode": "USD",
                 "units": 30,
