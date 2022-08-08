@@ -29,3 +29,4 @@ WORKDIR /app
 COPY --from=builder /cartservice .
 ENV ASPNETCORE_URLS http://*:7070
 ENTRYPOINT ["/app/cartservice"]
+
